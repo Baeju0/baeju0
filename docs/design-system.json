@@ -1,0 +1,251 @@
+{
+  "design_system": {
+    "brand_identity": {
+      "name": "Baeju0 Labs",
+      "archetype": "The Practical Architect (실용적 설계자)",
+      "aesthetic_direction": "Industrial Laboratory (산업적 실험실)",
+      "core_philosophy": "Small experiments, solid products, transparent records.",
+      "visual_voice": "Raw, precise, structured, transparent, functional."
+    },
+    "typography": {
+      "font_families": {
+        "display": "Space Grotesk, sans-serif",
+        "body": "-apple-system, sans-serif",
+        "utility": "IBM Plex Mono, monospace"
+      },
+      "type_scale": {
+        "h1": {
+          "size": "3.5rem",
+          "line_height": "1.1",
+          "weight": "700",
+          "letter_spacing": "-0.03em"
+        },
+        "h2": {
+          "size": "2.25rem",
+          "line_height": "1.2",
+          "weight": "600",
+          "letter_spacing": "-0.02em"
+        },
+        "h3": {
+          "size": "1.5rem",
+          "line_height": "1.3",
+          "weight": "600",
+          "letter_spacing": "-0.01em"
+        },
+        "body_large": {
+          "size": "1.125rem",
+          "line_height": "1.6",
+          "weight": "400"
+        },
+        "body_small": {
+          "size": "0.95rem",
+          "line_height": "1.5",
+          "weight": "400"
+        },
+        "caption": {
+          "size": "0.8rem",
+          "line_height": "1.4",
+          "weight": "500",
+          "uppercase": true
+        }
+      },
+      "korean_optimization": {
+        "word_break": "keep-all",
+        "line_height_adjustment": "English + 0.15",
+        "letter_spacing_adjustment": "-0.02em",
+        "font_feature_settings": "'palt' on"
+      },
+      "font_loading_strategy": "Preload Display and Utility fonts. Use swap for Body text to ensure instant visibility."
+    },
+    "color_and_theme": {
+      "mode": "dark_only",
+      "color_palette": {
+        "primary": "#F4F4F5",
+        "secondary": "#27272A",
+        "accent": "#FF4500",
+        "background": "#09090B",
+        "foreground": "#F4F4F5",
+        "neutrals": {
+          "100": "#09090B",
+          "200": "#18181B",
+          "300": "#27272A",
+          "400": "#3F3F46",
+          "500": "#A1A1AA",
+          "900": "#FAFAFA"
+        },
+        "semantic": {
+          "live": "#00C853",
+          "beta": "#FFAB00",
+          "concept": "#2979FF",
+          "retired": "#9E9E9E"
+        },
+        "grid_line": "#151518"
+      },
+      "color_usage_rules": {
+        "primary": "Main text (light on dark background).",
+        "accent": "Primary Call-to-Actions (CTAs) and critical validation points only.",
+        "background": "Deep black (#09090B) for industrial dark aesthetic.",
+        "cards": "Elevated surface (#18181B) for cards and interactive elements.",
+        "borders": "Subtle borders (#27272A) for structure, stronger (#3F3F46) for section dividers.",
+        "grid_lines": "Very subtle (#151518) graph paper pattern."
+      },
+      "css_variables_structure": {
+        "root": "--color-bg, --color-fg, --color-primary, --color-accent, --neutral-100 to --neutral-900, --grid-line"
+      }
+    },
+    "spacing_and_layout": {
+      "grid_system": {
+        "mobile": {
+          "columns": 4,
+          "gutter": "12px",
+          "margin": "16px"
+        },
+        "tablet": {
+          "columns": 8,
+          "gutter": "20px",
+          "margin": "24px"
+        },
+        "desktop": {
+          "columns": 12,
+          "gutter": "24px",
+          "margin": "40px",
+          "max_width": "1200px"
+        }
+      },
+      "spacing_scale": "4px base (4, 8, 12, 16, 24, 32, 48, 64, 96, 128)",
+      "breakpoints": {
+        "mobile": "375px",
+        "tablet": "768px",
+        "desktop": "1024px"
+      },
+      "layout_philosophy": "Modular Grid. Every element lives in a defined rectangular cell. Visible grid lines act as a framework, symbolizing the 'engineering' aspect."
+    },
+    "spatial_composition": {
+      "layout_strategy": {
+        "type": "Modular Asymmetry",
+        "description": "Information is organized in blocks (bento-box style but rigid/technical).",
+        "grid_breaking": "Only the main Hero CTA breaks the grid to create visual tension."
+      },
+      "negative_space": "Dense but organized. Mimics a dashboard or a well-packed workbench.",
+      "z_index_strategy": "Flat mostly. Modals/Popovers float with sharp shadows at z-index 100."
+    },
+    "components": {
+      "buttons": {
+        "primary_cta": {
+          "style": "Solid block, sharp corners, mono typography.",
+          "background": "var(--color-accent)",
+          "text": "#FFFFFF",
+          "border": "none",
+          "hover": "Slight vertical lift (-2px) + subtle light brutalist shadow."
+        },
+        "secondary": {
+          "style": "Outline, visible border.",
+          "background": "transparent",
+          "border": "1px solid var(--color-primary)",
+          "text": "var(--color-primary)",
+          "hover": "Fill with primary color, invert text."
+        },
+        "states": "Active state mimics physical button press (scale 0.98)."
+      },
+      "cards": {
+        "product_card": {
+          "style": "Technical specification card.",
+          "border": "1px solid var(--neutral-300)",
+          "background": "var(--neutral-200)",
+          "header": "Monospace ID number + Status badge",
+          "footer": "Action link with arrow icon.",
+          "hover": "Border color changes to accent."
+        }
+      },
+      "forms": {
+        "input": "Rectangular, bottom-border focused or full-box technical inputs. No rounded corners."
+      },
+      "navigation": {
+        "style": "Minimal sticky bar. Logo left, simplified menu right. Blur backdrop with dark transparency."
+      },
+      "border_radius": "0px (Sharp) or 2px (Micro-rounded) for strictly technical feel.",
+      "shadows": {
+        "subtle": "0 1px 2px rgba(0,0,0,0.3)",
+        "heavy": "4px 4px 0px rgba(255,255,255,0.15) (Inverted brutalist shadow for dark mode)"
+      }
+    },
+    "motion_and_animation": {
+      "animation_philosophy": "Mechanical Precision. Movements are linear or swift cubic-bezier. No soft, dreamy fades.",
+      "page_load_animations": {
+        "hero": "Text reveals from behind masks (clipping-path).",
+        "stagger": "Grid items appear sequentially like a system boot sequence."
+      },
+      "scroll_effects": {
+        "sticky": "Section headers stick to the top to mimic a filing cabinet.",
+        "reveal": "Cards slide up with a hard stop."
+      },
+      "hover_states": {
+        "cards": "Border color change to Accent. Immediate response."
+      },
+      "micro_interactions": {
+        "buttons": "Click feels mechanical (instant displacement)."
+      }
+    },
+    "backgrounds_and_visual_details": {
+      "background_strategy": {
+        "main": "Graph paper pattern (very subtle #151518 grid on #09090B).",
+        "sections": "Divided by visible horizontal lines (#3F3F46)."
+      },
+      "visual_effects": {
+        "noise": "Subtle film grain (4% opacity) over the whole page to add texture.",
+        "patterns": "Technical crosshairs (+) at grid intersections."
+      },
+      "decorative_elements": {
+        "barcodes": "Stylized barcodes for decorative IDs.",
+        "timestamps": "Dynamic current time display in the header (Lab feel)."
+      }
+    },
+    "visual_hierarchy": {
+      "focal_points": [
+        "Hero Headline ('Baeju0 Labs')",
+        "Primary CTA ('지금 만드는 제품 보기')",
+        "Now Shipping Cards with Status Badges"
+      ],
+      "visual_weight_distribution": "Top-heavy hero (3x height), followed by high-contrast cards. Text sections are lighter.",
+      "reading_flow": "F-pattern strictly followed. Clear headings guide the scan."
+    },
+    "responsive_strategy": {
+      "mobile_strategy": "Stack grid cells vertically. Keep 'Live' status badges prominent. CTA buttons span full width.",
+      "touch_targets": "Minimum 48px height for all interactive elements.",
+      "thumb_zone_optimization": "Primary navigation and main CTAs kept in the lower 60% of the screen on mobile."
+    },
+    "accessibility": {
+      "color_contrast": "AAA standard for text (Light text on dark background).",
+      "focus_states": "Accent color outline (2px) for keyboard focus.",
+      "motion_preferences": "Respect 'prefers-reduced-motion' by disabling slide-ups."
+    },
+    "validation_hooks": {
+      "psychological_triggers": {
+        "authority": "Technical aesthetic implies competence.",
+        "social_proof": "Live/Beta badges imply active usage.",
+        "transparency": "Showing 'Concept' and 'Retired' builds trust through honesty."
+      },
+      "cta_optimization": {
+        "placement": "Sticky bottom bar on mobile for '지금 만드는 제품 보기'.",
+        "copy": "Use action verbs: 'View Product', '지금 만드는 제품 보기'."
+      },
+      "trust_signals": {
+        "badges": "Status indicators (Green dot for Live).",
+        "updates": "Last updated date visible on project cards."
+      },
+      "korean_market_specific": {
+        "fast_loading": "Zero bloat. Instant render.",
+        "kakao_share": "Custom OG image for KakaoTalk sharing generated from the 'Identity' section."
+      }
+    },
+    "metrics_and_tracking": {
+      "primary_metrics": "Outbound clicks to SellPage/FastPost.",
+      "secondary_metrics": "Scroll depth (did they reach 'Principles'?).",
+      "behavioral_tracking": "Hover time on 'Concept' cards (interest validation).",
+      "ab_testing_candidates": [
+        "Hero Copy (Identity focus vs Product focus)",
+        "Card Layout (List vs Grid)"
+      ]
+    }
+  }
+}
