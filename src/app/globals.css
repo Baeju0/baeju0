@@ -73,6 +73,7 @@
 html {
   word-break: keep-all;
   font-feature-settings: 'palt' on;
+  scroll-behavior: smooth;
 }
 
 body {

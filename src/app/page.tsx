@@ -5,57 +5,55 @@ const nowShipping = [
     id: 'PRD-001',
     title: 'SellPage',
     description:
-      '상품 사진 한 장을 상세 이미지/콘텐츠로 확장하는 AI 스튜디오.',
+      '스마트폰 촬영본 한 장으로 연출컷 생성부터 상세페이지 제작까지, 상품 런칭의 전 과정을 자동화하는 AI 스튜디오.',
+    impact: [
+      '출시 2개월 만에 셀러 80명 확보 및 유료 결제 전환 성공',
+      'AI 스튜디오/상세페이지 생성 150건 이상 (기능 검증 완료)',
+      '촬영/디자인 외주 비용 없이 판매를 시작하는 시장 수요 검증 중',
+    ],
     status: 'live' as const,
-    href: '#',
-    lastUpdated: '2024.12.01',
+    href: 'https://www.sellpage.life',
+    lastUpdated: '2025.12.25',
   },
   {
     id: 'PRD-002',
     title: 'FastPost',
     description:
       '이미지 기반 스토리형 콘텐츠 초안을 빠르게 만드는 AI 글쓰기 도구.',
+    impact: [
+      '콘텐츠 발행 시간 30분 → 3분으로 단축',
+      'AI 에이전트 기반 자동화 워크플로우 구축',
+    ],
     status: 'live' as const,
-    href: '#',
-    lastUpdated: '2024.12.05',
+    href: 'https://fastpost.life',
+    lastUpdated: '2025.11.11',
   },
 ];
 
-const conceptSketches = [
-  {
-    id: 'CON-001',
-    title: '맘몸일기',
-    description:
-      '감정 색상 + 신체 증상을 함께 기록하는 경험이 사용자의 자기이해/기록 지속성에 도움이 되는지 탐색한 초기 기획.',
-    status: 'concept' as const,
-    href: '#',
-  },
-];
-
-const principles = [
+const values = [
   {
     number: '01',
-    title: '사용자 감정과 시간을 존중',
+    title: '기술보다 비즈니스 임팩트',
     description:
-      '사용자의 감정과 시간은 가장 소중한 자원입니다. 불필요한 기다림과 혼란을 최소화합니다.',
+      '화려한 최신 기술 도입 그 자체보다는, 비즈니스 문제를 가장 확실하고 효율적으로 해결하는 적정 기술을 지향합니다.',
   },
   {
     number: '02',
-    title: '기능보다 지속 가능한 사용 경험',
+    title: 'AI를 도구가 아닌 동료로',
     description:
-      '많은 기능보다 꾸준히 쓰이는 경험을 만듭니다. 사용자가 돌아오는 제품이 좋은 제품입니다.',
+      '단순 코딩 보조를 넘어, 기획과 설계를 함께 논의하는 파트너로 대합니다. 모호한 아이디어를 구체적인 문서와 구조로 빠르게 시각화하여 개발의 완성도를 높입니다.',
   },
   {
     number: '03',
-    title: '데이터는 최소로, 목적은 명확하게',
+    title: '만드는 편함보다 쓰는 경험',
     description:
-      '필요 이상의 데이터를 수집하지 않습니다. 모든 데이터 수집에는 명확한 목적이 있어야 합니다.',
+      '개발자에게 편한 로직보다 사용자에게 편한 경험(UX)을 선택합니다. 사용자의 시간을 1초라도 아끼기 위해 기꺼이 번거로움을 감수합니다.',
   },
   {
     number: '04',
-    title: '작게 만들고 빠르게 검증하며 기록',
+    title: '완벽한 준비보다 빠른 실행',
     description:
-      '거대한 계획보다 작은 실험을 선호합니다. 빠르게 만들고, 빠르게 검증하고, 배운 것을 기록합니다.',
+      '책상 앞의 거대한 계획보다 시장에서의 작은 실험을 신뢰합니다. 빠르게 만들고, 빠르게 검증하고, 데이터로 배웁니다.',
   },
 ];
 
@@ -71,28 +69,30 @@ export default function Home() {
             {/* Main Hero Content */}
             <div className="md:col-span-8">
               <p className="text-caption mb-4 text-[var(--neutral-500)]">
-                Baeju0의 독립 제품 작업실
+                Product Engineer
               </p>
               <h1 className="font-[family-name:var(--font-space-grotesk)] text-display-h1 mb-6 text-[var(--color-primary)]">
                 <span className="text-[var(--color-primary)]">Baeju0</span>
                 <span className="text-[var(--neutral-500)]"> Labs</span>
               </h1>
               <p className="text-body-large max-w-xl text-[var(--neutral-500)]">
-                1인 개발자 Baeju0의 제품 작업실입니다.
+                가설 검증부터 배포까지 주도하는{' '}
+                <strong>Product Engineer Baeju0</strong>의 작업실입니다.
                 <br />
-                작게 만들고, 실제로 운영하고, 배운 것을 정리합니다.
+                기술로 비즈니스 문제를 해결하고, 실제 시장에서 동작하는 제품을
+                만듭니다.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a href="#now-shipping">
-                  <Button variant="primary">지금 만드는 제품 보기</Button>
+                  <Button variant="primary">운영 중인 제품 보기</Button>
                 </a>
               </div>
 
               {/* Channel Links */}
               <div className="mt-6 flex items-center gap-4">
                 <a
-                  href="https://threads.net"
+                  href="https://www.threads.com/@flowyoung_off?igshid=NTc4MTIwNjQ2YQ=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--neutral-500)] transition-colors hover:text-[var(--color-primary)]"
@@ -101,7 +101,7 @@ export default function Home() {
                 </a>
                 <span className="text-[var(--neutral-300)]">·</span>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Baeju0"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--neutral-500)] transition-colors hover:text-[var(--color-primary)]"
@@ -110,7 +110,7 @@ export default function Home() {
                 </a>
                 <span className="text-[var(--neutral-300)]">·</span>
                 <a
-                  href="mailto:hello@baeju0.com"
+                  href="mailto:young93745@gmail.com"
                   className="font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--neutral-500)] transition-colors hover:text-[var(--color-primary)]"
                 >
                   Email
@@ -130,10 +130,10 @@ export default function Home() {
               </div>
               <div>
                 <p className="text-caption mb-1 text-[var(--neutral-500)]">
-                  Concept Sketches
+                  Core Values
                 </p>
                 <p className="font-[family-name:var(--font-space-grotesk)] text-display-h2 text-[var(--color-primary)]">
-                  {conceptSketches.length}
+                  {values.length}
                 </p>
               </div>
             </div>
@@ -165,57 +165,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Concept Sketches Section */}
-      <section id="concepts" className="section-divider">
-        <div className="mx-auto max-w-[1200px] px-4 py-16 md:px-10">
-          {/* Section Header */}
-          <div className="sticky top-14 z-40 -mx-4 mb-8 border-b border-[var(--neutral-300)] bg-[var(--neutral-200)]/95 px-4 py-4 backdrop-blur-sm md:-mx-10 md:px-10">
-            <div className="flex items-center justify-between">
-              <div>
-                <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h2 text-[var(--color-primary)]">
-                  Concept Sketches
-                </h2>
-                <p className="mt-1 font-[family-name:var(--font-ibm-plex-mono)] text-xs text-[var(--neutral-500)]">
-                  완성도 부담 없이 방향성과 관심 영역을 탐색한 아이디어들
-                </p>
-              </div>
-              <span className="font-[family-name:var(--font-ibm-plex-mono)] text-caption text-[var(--neutral-500)]">
-                {conceptSketches.length} Ideas
-              </span>
-            </div>
-          </div>
-
-          {/* Concepts Grid */}
-          <div className="grid gap-6 md:grid-cols-2">
-            {conceptSketches.map((concept) => (
-              <ProductCard key={concept.id} {...concept} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Principles Section */}
-      <section id="principles" className="section-divider">
+      {/* Values Section */}
+      <section id="values" className="section-divider">
         <div className="mx-auto max-w-[1200px] px-4 py-16 md:px-10">
           {/* Section Header */}
           <div className="sticky top-14 z-40 -mx-4 mb-8 border-b border-[var(--neutral-300)] bg-[var(--neutral-200)]/95 px-4 py-4 backdrop-blur-sm md:-mx-10 md:px-10">
             <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h2 text-[var(--color-primary)]">
-              Principles
+              Values
             </h2>
           </div>
 
-          {/* Principles Grid */}
+          {/* Values Grid */}
           <div className="grid gap-px border border-[var(--neutral-300)] bg-[var(--neutral-300)] md:grid-cols-2">
-            {principles.map((principle) => (
-              <div key={principle.number} className="bg-[var(--neutral-200)] p-6">
+            {values.map((value) => (
+              <div key={value.number} className="bg-[var(--neutral-200)] p-6">
                 <span className="font-[family-name:var(--font-ibm-plex-mono)] text-caption text-[var(--color-accent)]">
-                  {principle.number}
+                  {value.number}
                 </span>
                 <h3 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 mb-2 mt-2 text-[var(--color-primary)]">
-                  {principle.title}
+                  {value.title}
                 </h3>
                 <p className="text-body-small text-[var(--neutral-500)]">
-                  {principle.description}
+                  {value.description}
                 </p>
               </div>
             ))}
@@ -239,19 +210,26 @@ export default function Home() {
                 Baeju0
               </h3>
               <p className="text-caption mb-2 text-[var(--neutral-500)]">
-                1인 개발자
+                Product Engineer
               </p>
               <p className="text-body-large max-w-xl text-[var(--neutral-500)]">
-                기획·디자인·개발·운영을 연결하며
+                기획부터 배포, 운영까지 제품의 전 과정을 주도하는 Product
+                Engineer입니다.
                 <br />
-                AI 제품을 실제 사용자 가치로 완성하는 1인 개발자입니다.
+                <br />
+                AI 에이전트와 함께 모호한 생각을 구체적인 문서와 코드로 빠르게
+                시각화하며, 1인 개발의 한계를 넘어선 생산성을 만들어냅니다.
+                <br />
+                <br />
+                혼자만의 빠른 실행을 넘어, 이제는 팀과 함께 더 깊이 있는 기술적
+                고민과 견고한 가치를 만들어가는 과정을 기다리고 있습니다.
               </p>
             </div>
 
             <div className="flex flex-col gap-3 border-l border-[var(--neutral-300)] pl-6 md:col-span-4">
               <p className="text-caption text-[var(--neutral-500)]">Channels</p>
               <a
-                href="https://threads.net"
+                href="https://www.threads.com/@flowyoung_off?igshid=NTc4MTIwNjQ2YQ=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--color-primary)] transition-colors hover:text-[var(--color-accent)]"
@@ -273,7 +251,7 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/Baeju0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--color-primary)] transition-colors hover:text-[var(--color-accent)]"
@@ -295,7 +273,7 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                href="mailto:hello@baeju0.com"
+                href="mailto:young93745@gmail.com"
                 className="inline-flex items-center gap-2 font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--color-primary)] transition-colors hover:text-[var(--color-accent)]"
               >
                 Email
@@ -345,7 +323,7 @@ export default function Home() {
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[var(--neutral-300)] bg-[var(--neutral-200)] p-4 md:hidden">
         <a href="#now-shipping" className="block">
           <Button variant="primary" className="w-full">
-            지금 만드는 제품 보기
+            운영 중인 제품 보기
           </Button>
         </a>
       </div>

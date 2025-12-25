@@ -25,10 +25,10 @@ export function Navigation() {
               Products
             </Link>
             <Link
-              href="#principles"
+              href="#values"
               className="text-[var(--neutral-500)] transition-colors hover:text-[var(--color-primary)]"
             >
-              Principles
+              Values
             </Link>
             <Link
               href="#about"

@@ -10,6 +10,7 @@ interface ProductCardProps {
   status: Status;
   href: string;
   lastUpdated?: string;
+  impact?: string[];
 }
 
 export function ProductCard({
@@ -19,6 +20,7 @@ export function ProductCard({
   status,
   href,
   lastUpdated,
+  impact,
 }: ProductCardProps) {
   return (
     <article className="group flex flex-col border border-[var(--neutral-300)] bg-[var(--neutral-200)] transition-colors card-hover">
@@ -38,6 +40,19 @@ export function ProductCard({
         <p className="text-body-small text-[var(--neutral-500)]">
           {description}
         </p>
+        {impact && impact.length > 0 && (
+          <ul className="mt-3 space-y-1.5 border-t border-[var(--neutral-300)] pt-3">
+            {impact.map((item, index) => (
+              <li
+                key={index}
+                className="flex items-start gap-2 font-[family-name:var(--font-ibm-plex-mono)] text-xs text-[var(--color-accent)]"
+              >
+                <span className="mt-0.5">•</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
 
       {/* Footer */}
@@ -49,6 +64,8 @@ export function ProductCard({
         )}
         <Link
           href={href}
+          target="_blank"
+          rel="noopener noreferrer"
           className="ml-auto inline-flex items-center gap-1 font-[family-name:var(--font-ibm-plex-mono)] text-sm font-medium text-[var(--color-primary)] transition-colors hover:text-[var(--color-accent)]"
         >
           View Product
