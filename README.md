@@ -2,8 +2,7 @@
 
 > **"가설 검증부터 배포까지 주도하는 Product Engineer Baeju0의 작업실"**
 
-이 저장소는 저의 개발 가치관, 운영 중인 제품(Products), 그리고 기술적 경험을 담은 포트폴리오 웹사이트의 소스 코드입니다.
-**Next.js 15 (App Router)**와 **Tailwind CSS**를 활용하여 구축되었으며, 미니멀한 디자인과 반응형 UI, 그리고 검색 엔진 최적화(SEO)에 집중했습니다.
+이 저장소는 저의 개발 가치관, 운영 중인 제품(Products), 그리고 기술적 경험을 담은 포트폴리오 웹사이트의 소스 코드입니다. **Next.js 15 (App Router)**와 **Tailwind CSS**를 활용하여 구축되었으며, 미니멀한 디자인과 반응형 UI, 그리고 검색 엔진 최적화(SEO)에 집중했습니다.
 
 🔗 **Live Demo:** [https://baeju0.blog](https://baeju0.blog)
 
