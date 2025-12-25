@@ -10,7 +10,7 @@
 
 ## 🛠 Tech Stack
 
-- **Framework:** [Next.js 15](https://nextjs.org/) (App Router, Turbopack)
+- **Framework:** [Next.js 15](https://nextjs.org/)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Deployment:** [Vercel](https://vercel.com/)
@@ -31,8 +31,8 @@
 > **다중 이미지 흐름 기반 스토리텔링 및 개인화 글쓰기 에이전트**
 - **Tech (Vision):** 여러 장의 이미지 순서를 분석하여 기승전결이 있는 스토리텔링 맥락 파악
 - **Personalization:** 사용자 과거 포스팅 스타일(Tone & Manner)을 학습하여 맞춤형 텍스트 생성
-- **Integration:** 네이버/카카오맵 API를 연동, 장소 리뷰 데이터를 크롤링하여 풍부한 정보 제공
-- **UX:** 플랫폼별(블로그/SNS) 최적화된 프롬프트 및 Streaming Response 적용
+- **Integration:** 네이버/카카오맵 API를 연동하여 장소 및 리뷰 데이터를 수집하고, 이미지 키워드에 맞춰 콘텐츠에 자연스럽게 반영
+- **Optimization:** 네이버 블로그, 인스타그램 등 플랫폼별 특성에 맞춘 최적화된 프롬프트 구조 설계
 - **Status:** Live (Stable)
 
 <br/>
@@ -48,39 +48,6 @@
 
 <br/>
 
-## 📂 Project Structure
-
-```bash
-├── src
-│   ├── app          # Next.js App Router (Page structure)
-│   ├── components   # Reusable UI Components (Navigation, ProductCard, etc.)
-│   ├── styles       # Global styles (Tailwind config)
-│   └── utils        # Utility functions
-├── public           # Static assets
-└── ...
-```
-
-<br/>
-
-## ⚡ Getting Started
-
-로컬 환경에서 이 프로젝트를 실행하려면 다음 명령어를 사용하세요.
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/Baeju0/portfolio.git
-
-# 2. Install dependencies
-npm install
-
-# 3. Run development server
-npm run dev
-```
-
-브라우저에서 `http://localhost:3000` 을 열어 확인하실 수 있습니다.
-
-<br/>
-
 ## 📬 Contact
 
 비즈니스 임팩트를 함께 만들어갈 팀을 찾고 있습니다.
@@ -88,8 +55,6 @@ npm run dev
 - **Email:** [young93745@gmail.com](mailto:young93745@gmail.com)
 - **Github:** [@Baeju0](https://github.com/Baeju0)
 - **Threads:** [@flowyoung_off](https://www.threads.com/@flowyoung_off)
-
-<br/>
 
 ---
 
