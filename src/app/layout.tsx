@@ -17,6 +17,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://baeju0.blog'),
   title: 'Baeju0 Labs | 1인 개발자의 실험실',
   description:
     'Small experiments, solid products, transparent records. 작은 실험들, 단단한 제품들, 투명한 기록들.',

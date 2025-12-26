@@ -1,15 +1,12 @@
 @import 'tailwindcss';
 
-/* Design System: Industrial Laboratory - Dark Mode */
 :root {
-  /* Colors - Dark Mode */
   --color-primary: #f4f4f5;
   --color-secondary: #27272a;
   --color-accent: #ff4500;
   --color-bg: #09090b;
   --color-fg: #f4f4f5;
 
-  /* Neutrals - Inverted for Dark Mode */
   --neutral-100: #09090b;
   --neutral-200: #18181b;
   --neutral-300: #27272a;
@@ -17,20 +14,16 @@
   --neutral-500: #a1a1aa;
   --neutral-900: #fafafa;
 
-  /* Grid line (subtle) */
   --grid-line: #151518;
 
-  /* Semantic */
   --color-live: #00c853;
   --color-beta: #ffab00;
   --color-concept: #2979ff;
   --color-retired: #9e9e9e;
 
-  /* Spacing */
   --space-unit: 4px;
   --grid-gutter: 24px;
 
-  /* Shadows */
   --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-heavy: 4px 4px 0px rgba(255, 255, 255, 0.15);
 }
@@ -44,7 +37,6 @@
   --font-utility: var(--font-ibm-plex-mono);
 }
 
-/* Graph Paper Background Pattern - Dark (subtle) */
 .graph-paper {
   background-color: var(--neutral-100);
   background-image: linear-gradient(
@@ -55,7 +47,6 @@
   background-size: 24px 24px;
 }
 
-/* Film Grain Noise Overlay */
 .noise-overlay::before {
   content: '';
   position: fixed;
@@ -69,7 +60,6 @@
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
-/* Typography - Korean Optimization */
 html {
   word-break: keep-all;
   font-feature-settings: 'palt' on;
@@ -82,7 +72,6 @@ body {
   font-family: var(--font-body), -apple-system, sans-serif;
 }
 
-/* Type Scale */
 .text-display-h1 {
   font-size: 3.5rem;
   line-height: 1.1;
@@ -124,7 +113,6 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* Brutalist Shadow - Dark Mode */
 .shadow-brutalist {
   box-shadow: var(--shadow-heavy);
 }
@@ -134,18 +122,15 @@ body {
   box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.2);
 }
 
-/* Button Active State - Mechanical Press */
 .btn-press:active {
   transform: scale(0.98);
 }
 
-/* Focus States - Accessibility */
 *:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
 
-/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -156,12 +141,10 @@ body {
   }
 }
 
-/* Section Divider - Dark (visible) */
 .section-divider {
   border-top: 2px solid var(--neutral-400);
 }
 
-/* Status Badge Base */
 .status-dot {
   width: 8px;
   height: 8px;
@@ -184,12 +167,10 @@ body {
   }
 }
 
-/* Card Hover Border */
 .card-hover:hover {
   border-color: var(--color-accent);
 }
 
-/* Crosshair Decoration */
 .crosshair::before {
   content: '+';
   position: absolute;

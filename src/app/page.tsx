@@ -63,11 +63,9 @@ export default function Home() {
     <div className="min-h-screen pb-20 md:pb-0">
       <Navigation />
 
-      {/* Hero Section */}
       <section className="section-divider">
         <div className="mx-auto max-w-[1200px] px-4 py-32 md:px-10 md:py-48">
           <div className="grid gap-8 md:grid-cols-12">
-            {/* Main Hero Content */}
             <div className="md:col-span-8">
               <p className="text-caption mb-4 text-[var(--neutral-500)]">
                 Product Engineer
@@ -90,7 +88,6 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Channel Links */}
               <div className="mt-6 flex items-center gap-4">
                 <a
                   href="https://www.threads.com/@flowyoung_off?igshid=NTc4MTIwNjQ2YQ=="
@@ -119,7 +116,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Side Info Panel */}
             <div className="flex flex-col gap-4 border-l border-[var(--neutral-300)] pl-6 md:col-span-4">
               <div>
                 <p className="text-caption mb-1 text-[var(--neutral-500)]">
@@ -142,10 +138,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Now Shipping Section */}
       <section id="now-shipping" className="section-divider">
         <div className="mx-auto max-w-[1200px] px-4 py-16 md:px-10">
-          {/* Section Header - Sticky */}
           <div className="sticky top-14 z-40 -mx-4 mb-8 border-b border-[var(--neutral-300)] bg-[var(--neutral-200)]/95 px-4 py-4 backdrop-blur-sm md:-mx-10 md:px-10">
             <div className="flex items-center justify-between">
               <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h2 text-[var(--color-primary)]">
@@ -157,7 +151,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Product Grid */}
           <div className="grid gap-6 md:grid-cols-2">
             {nowShipping.map((product) => (
               <ProductCard key={product.id} {...product} />
@@ -166,17 +159,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Values Section */}
       <section id="values" className="section-divider">
         <div className="mx-auto max-w-[1200px] px-4 py-16 md:px-10">
-          {/* Section Header */}
           <div className="sticky top-14 z-40 -mx-4 mb-8 border-b border-[var(--neutral-300)] bg-[var(--neutral-200)]/95 px-4 py-4 backdrop-blur-sm md:-mx-10 md:px-10">
             <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h2 text-[var(--color-primary)]">
               Values
             </h2>
           </div>
 
-          {/* Values Grid */}
           <div className="grid gap-px border border-[var(--neutral-300)] bg-[var(--neutral-300)] md:grid-cols-2">
             {values.map((value) => (
               <div key={value.number} className="bg-[var(--neutral-200)] p-6">
@@ -195,10 +185,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="section-divider">
         <div className="mx-auto max-w-[1200px] px-4 py-16 md:px-10">
-          {/* Section Header */}
           <div className="sticky top-14 z-40 -mx-4 mb-8 border-b border-[var(--neutral-300)] bg-[var(--neutral-200)]/95 px-4 py-4 backdrop-blur-sm md:-mx-10 md:px-10">
             <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h2 text-[var(--color-primary)]">
               About
@@ -298,7 +286,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="section-divider">
         <div className="mx-auto max-w-[1200px] px-4 py-12 md:px-10">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
@@ -320,7 +307,6 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Mobile Sticky CTA */}
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[var(--neutral-300)] bg-[var(--neutral-200)] p-4 md:hidden">
         <a href="#now-shipping" className="block">
           <Button variant="primary" className="w-full">

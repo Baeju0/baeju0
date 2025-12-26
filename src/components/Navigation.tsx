@@ -5,7 +5,6 @@ export function Navigation() {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--neutral-300)] bg-[var(--neutral-200)]/80 backdrop-blur-sm">
       <nav className="mx-auto flex h-14 max-w-[1200px] items-center justify-between px-4 md:px-10">
-        {/* Logo */}
         <Link
           href="/"
           className="font-[family-name:var(--font-space-grotesk)] text-lg font-bold tracking-tight text-[var(--color-primary)]"
@@ -14,7 +13,6 @@ export function Navigation() {
           <span className="font-normal text-[var(--neutral-500)]">Labs</span>
         </Link>
 
-        {/* Right Side */}
         <div className="flex items-center gap-6">
           <LiveClock />
           <div className="hidden items-center gap-4 font-[family-name:var(--font-ibm-plex-mono)] text-sm md:flex">

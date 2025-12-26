@@ -24,7 +24,6 @@ export function ProductCard({
 }: ProductCardProps) {
   return (
     <article className="group flex flex-col border border-[var(--neutral-300)] bg-[var(--neutral-200)] transition-colors card-hover">
-      {/* Header */}
       <div className="flex items-center justify-between border-b border-[var(--neutral-300)] px-4 py-3">
         <span className="font-[family-name:var(--font-ibm-plex-mono)] text-xs text-[var(--neutral-500)]">
           {id}
@@ -32,7 +31,6 @@ export function ProductCard({
         <StatusBadge status={status} />
       </div>
 
-      {/* Body */}
       <div className="flex flex-1 flex-col gap-2 p-4">
         <h3 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 text-[var(--color-primary)]">
           {title}
@@ -55,7 +53,6 @@ export function ProductCard({
         )}
       </div>
 
-      {/* Footer */}
       <div className="flex items-center justify-between border-t border-[var(--neutral-300)] px-4 py-3">
         {lastUpdated && (
           <span className="font-[family-name:var(--font-ibm-plex-mono)] text-xs text-[var(--neutral-500)]">
