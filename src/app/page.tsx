@@ -1,4 +1,4 @@
-import { Navigation, ProductCard, Button } from '@/components';
+import { Navigation, ProductCard, Button, SocialLink } from '@/components';
 
 const nowShipping = [
   {
@@ -89,30 +89,29 @@ export default function Home() {
               </div>
 
               <div className="mt-6 flex items-center gap-4">
-                <a
+                <SocialLink
                   href="https://www.threads.com/@flowyoung_off?igshid=NTc4MTIwNjQ2YQ=="
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  platform="Threads"
                   className="font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--neutral-500)] transition-colors hover:text-[var(--color-primary)]"
                 >
                   Threads
-                </a>
+                </SocialLink>
                 <span className="text-[var(--neutral-300)]">·</span>
-                <a
+                <SocialLink
                   href="https://github.com/Baeju0"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  platform="GitHub"
                   className="font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--neutral-500)] transition-colors hover:text-[var(--color-primary)]"
                 >
                   GitHub
-                </a>
+                </SocialLink>
                 <span className="text-[var(--neutral-300)]">·</span>
-                <a
+                <SocialLink
                   href="mailto:hello@baeju0.blog"
+                  platform="Email"
                   className="font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--neutral-500)] transition-colors hover:text-[var(--color-primary)]"
                 >
                   Email
-                </a>
+                </SocialLink>
               </div>
             </div>
 
@@ -217,10 +216,9 @@ export default function Home() {
 
             <div className="flex flex-col gap-3 border-l border-[var(--neutral-300)] pl-6 md:col-span-4">
               <p className="text-caption text-[var(--neutral-500)]">Channels</p>
-              <a
+              <SocialLink
                 href="https://www.threads.com/@flowyoung_off?igshid=NTc4MTIwNjQ2YQ=="
-                target="_blank"
-                rel="noopener noreferrer"
+                platform="Threads"
                 className="inline-flex items-center gap-2 font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--color-primary)] transition-colors hover:text-[var(--color-accent)]"
               >
                 Threads
@@ -238,11 +236,10 @@ export default function Home() {
                     strokeLinecap="square"
                   />
                 </svg>
-              </a>
-              <a
+              </SocialLink>
+              <SocialLink
                 href="https://github.com/Baeju0"
-                target="_blank"
-                rel="noopener noreferrer"
+                platform="GitHub"
                 className="inline-flex items-center gap-2 font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--color-primary)] transition-colors hover:text-[var(--color-accent)]"
               >
                 GitHub
@@ -260,9 +257,10 @@ export default function Home() {
                     strokeLinecap="square"
                   />
                 </svg>
-              </a>
-              <a
+              </SocialLink>
+              <SocialLink
                 href="mailto:hello@baeju0.blog"
+                platform="Email"
                 className="inline-flex items-center gap-2 font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--color-primary)] transition-colors hover:text-[var(--color-accent)]"
               >
                 Email
@@ -280,7 +278,7 @@ export default function Home() {
                     strokeLinecap="square"
                   />
                 </svg>
-              </a>
+              </SocialLink>
             </div>
           </div>
         </div>

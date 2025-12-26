@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import { StatusBadge } from './StatusBadge';
+import { trackEvent } from '@/lib/mixpanel';
 
 type Status = 'live' | 'beta' | 'concept' | 'retired';
 
@@ -64,6 +67,13 @@ export function ProductCard({
           target="_blank"
           rel="noopener noreferrer"
           className="ml-auto inline-flex items-center gap-1 font-[family-name:var(--font-ibm-plex-mono)] text-sm font-medium text-[var(--color-primary)] transition-colors hover:text-[var(--color-accent)]"
+          onClick={() =>
+            trackEvent('click_product', {
+              id,
+              title,
+              url: href,
+            })
+          }
         >
           View Product
           <svg
