@@ -26,6 +26,11 @@ export const metadata: Metadata = {
     description: '1인 개발자의 실험실',
     locale: 'ko_KR',
     type: 'website',
+    images: ['/og-image.jpeg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.jpeg'],
   },
 };
 
