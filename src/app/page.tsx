@@ -60,7 +60,7 @@ const values = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen pb-20 md:pb-0">
+    <div className="min-h-screen">
       <Navigation />
 
       <section className="section-divider">
@@ -306,14 +306,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
-      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[var(--neutral-300)] bg-[var(--neutral-200)] p-4 md:hidden">
-        <a href="#now-shipping" className="block">
-          <Button variant="primary" className="w-full">
-            운영 중인 제품 보기
-          </Button>
-        </a>
-      </div>
     </div>
   );
 }
