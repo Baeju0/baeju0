@@ -108,7 +108,7 @@ export default function Home() {
                 </a>
                 <span className="text-[var(--neutral-300)]">·</span>
                 <a
-                  href="mailto:young93745@gmail.com"
+                  href="mailto:hello@baeju0.blog"
                   className="font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--neutral-500)] transition-colors hover:text-[var(--color-primary)]"
                 >
                   Email
@@ -262,7 +262,7 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                href="mailto:young93745@gmail.com"
+                href="mailto:hello@baeju0.blog"
                 className="inline-flex items-center gap-2 font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--color-primary)] transition-colors hover:text-[var(--color-accent)]"
               >
                 Email
