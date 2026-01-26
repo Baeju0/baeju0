@@ -13,7 +13,7 @@ const nowShipping = [
     ],
     status: 'live' as const,
     href: 'https://www.sellpage.life',
-    lastUpdated: '2025.12.25',
+    lastUpdated: '2026.01.20',
   },
   {
     id: 'PRD-002',
@@ -27,7 +27,7 @@ const nowShipping = [
     ],
     status: 'live' as const,
     href: 'https://fastpost.life',
-    lastUpdated: '2025.11.11',
+    lastUpdated: '2025.11.12',
   },
 ];
 
