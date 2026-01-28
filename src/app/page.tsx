@@ -5,11 +5,11 @@ const nowShipping = [
     id: 'PRD-001',
     title: 'SellPage',
     description:
-      '스마트폰 촬영본 한 장으로 연출컷 생성부터 상세페이지 제작까지, 상품 런칭의 전 과정을 자동화하는 AI 스튜디오.',
+      '생성형 AI(Gemini) API를 연동하여 이미지 처리 파이프라인을 최적화하고, 대용량 데이터를 웹에서 효율적으로 시각화한 솔루션.',
     impact: [
-      '출시 3개월 만에 누적 사용자 141명, 유료 결제 6건',
-      'AI 스튜디오/상세페이지 생성 258건 (기능 검증 완료)',
-      '촬영/디자인 외주 비용 없이 판매를 시작하는 시장 수요 검증 중',
+      'Next.js App Router와 Supabase를 활용한 서버리스 아키텍처 구축으로 운영 효율 최적화',
+      'Gemini API 프롬프트 튜닝을 통해 이미지 생성 데이터의 정합성(Consistency) 확보',
+      '반응형 웹 디자인 적용으로 모바일/PC 크로스 브라우징 완벽 지원',
     ],
     status: 'live' as const,
     href: 'https://www.sellpage.life',
@@ -19,11 +19,11 @@ const nowShipping = [
     id: 'PRD-002',
     title: 'FastPost',
     description:
-      '업로드한 여러 장의 사진 순서와 장소 정보를 바탕으로, 기승전결이 있는 블로그 포스팅 초안을 완성해 주는 개인화 글쓰기 에이전트.',
+      '다중 이미지 분석(Vision AI)과 위치 기반 API(Map)를 매쉬업(Mash-up)하여 자동화된 콘텐츠 생성 로직을 구현한 웹 서비스.',
     impact: [
-      'Vision AI를 활용하여 다중 이미지의 시간/공간적 흐름을 분석하고 스토리텔링 구성',
-      '네이버/카카오맵 API 연동으로 장소 리뷰 데이터를 수집하고, 이미지 키워드와 매칭하여 콘텐츠에 최적화된 형태로 반영',
-      '사용자 과거 글 분석을 통한 퍼스널 톤앤매너(어휘/문체) 학습 및 반영',
+      'Vision AI로 비정형 이미지 데이터를 분석하고, 메타데이터(시간/장소)를 구조화하여 처리',
+      'Kakao Map API 연동 및 좌표 데이터 시각화를 통해 직관적인 위치 정보 제공',
+      '사용자별 데이터 모델링을 통해 개인화된 톤앤매너(Context) 학습 로직 구현',
     ],
     status: 'live' as const,
     href: 'https://fastpost.life',
@@ -34,27 +34,27 @@ const nowShipping = [
 const values = [
   {
     number: '01',
-    title: '기술보다 비즈니스 임팩트',
+    title: '견고한 설계와 안정성',
     description:
-      '화려한 최신 기술 도입 그 자체보다는, 비즈니스 문제를 가장 확실하고 효율적으로 해결하는 적정 기술을 지향합니다.',
+      '화려한 기술 도입보다는, 유지보수가 용이한 아키텍처와 에러 없는 안정적인 서비스를 최우선으로 합니다.',
   },
   {
     number: '02',
-    title: 'AI를 도구가 아닌 동료로',
+    title: '데이터 중심의 사고 (R&D 취향 저격!)',
     description:
-      '단순 코딩 보조를 넘어, 기획과 설계를 함께 논의하는 파트너로 대합니다. 모호한 아이디어를 구체적인 문서와 구조로 빠르게 시각화하여 개발의 완성도를 높입니다.',
+      '직감보다는 정량적인 데이터를 근거로 의사결정하며, 로그 분석을 통해 시스템의 병목을 찾아 개선합니다.',
   },
   {
     number: '03',
-    title: '만드는 편함보다 쓰는 경험',
+    title: '사용자 경험(UX) 최적화',
     description:
-      '개발자에게 편한 로직보다 사용자에게 편한 경험(UX)을 선택합니다. 사용자의 시간을 1초라도 아끼기 위해 기꺼이 번거로움을 감수합니다.',
+      '복잡한 백엔드 로직을 사용자가 인지하지 못하도록 심플한 인터페이스로 추상화하여 구현합니다.',
   },
   {
     number: '04',
-    title: '완벽한 준비보다 빠른 실행',
+    title: '지속적인 학습과 개선',
     description:
-      '책상 앞의 거대한 계획보다 시장에서의 작은 실험을 신뢰합니다. 빠르게 만들고, 빠르게 검증하고, 데이터로 배웁니다.',
+      '새로운 기술 스택(Gemini, Next.js 등)을 빠르게 습득하여 프로젝트에 적용하고, 코드를 지속적으로 리팩토링합니다.',
   },
 ];
 
@@ -68,18 +68,18 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-12">
             <div className="md:col-span-8">
               <p className="text-caption mb-4 text-[var(--neutral-500)]">
-                Product Engineer
+                Web Engineer
               </p>
               <h1 className="font-[family-name:var(--font-space-grotesk)] text-display-h1 mb-6 text-[var(--color-primary)]">
                 <span className="text-[var(--color-primary)]">Baeju0</span>
                 <span className="text-[var(--neutral-500)]"> Labs</span>
               </h1>
               <p className="text-body-large max-w-xl text-[var(--neutral-500)]">
-                가설 검증부터 배포까지 주도하는{' '}
-                <strong>Product Engineer Baeju0</strong>의 작업실입니다.
+                데이터 시각화와 안정적인 서비스를 구축하는{' '}
+                <strong>Web Engineer Baeju0</strong>의 작업실입니다.
                 <br />
-                기술로 비즈니스 문제를 해결하고, 실제 시장에서 동작하는 제품을
-                만듭니다.
+                Next.js와 TypeScript를 기반으로, 복잡한 로직을 직관적인 UI로 구현하며
+                사용자 중심의 성능 개선에 집중합니다.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -198,19 +198,19 @@ export default function Home() {
                 Baeju0
               </h3>
               <p className="text-caption mb-2 text-[var(--neutral-500)]">
-                Product Engineer
+                Full-stack Engineer
               </p>
               <p className="text-body-large max-w-xl text-[var(--neutral-500)]">
-                기획부터 배포, 운영까지 제품의 전 과정을 주도하는 Product
-                Engineer입니다.
+                웹 서비스의 A to Z를 직접 구축하며 전체 라이프사이클을 경험한
+                Full-stack Engineer입니다.
                 <br />
                 <br />
-                AI 에이전트와 함께 모호한 생각을 구체적인 문서와 코드로 빠르게
-                시각화하며, 1인 개발의 한계를 넘어선 생산성을 만들어냅니다.
+                최신 기술 스택을 활용해 복잡한 데이터를 다루는 것에 흥미를 느끼며,
+                안정적인 API 설계와 데이터 시각화 구현에 강점이 있습니다.
                 <br />
                 <br />
-                혼자만의 빠른 실행을 넘어, 이제는 팀과 함께 더 깊이 있는 기술적
-                고민과 견고한 가치를 만들어가는 과정을 기다리고 있습니다.
+                개인의 성장을 넘어, 이제는 전문적인 R&D 팀의 일원으로서
+                기술적 난제를 함께 해결하고 서비스의 완성도를 높이고 싶습니다.
               </p>
             </div>
 
