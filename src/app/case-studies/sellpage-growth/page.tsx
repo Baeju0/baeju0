@@ -93,8 +93,7 @@ export default function SellPageGrowthCaseStudy() {
             Case 01
           </p>
           <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 mb-4 text-[var(--color-primary)]">
-            Mixpanel 퍼널 분석 — AI 스튜디오 vs AI 디자이너, 데이터가 보여준
-            것
+            Mixpanel 퍼널 분석 — 기능 명칭 하나가 활성화율을 바꿨다
           </h2>
 
           <div className="space-y-4 text-body-small text-[var(--neutral-500)]">
@@ -105,9 +104,10 @@ export default function SellPageGrowthCaseStudy() {
               <p>
                 Mixpanel 퍼널을 모니터링하던 중, 히어로 섹션에서 서비스
                 페이지까지 도달하는 사용자의 이탈률이 눈에 띄게 높았습니다.
-                SellPage에는 AI 스튜디오(이미지 생성)와 AI 디자이너(상세페이지
-                제작) 두 가지 핵심 기능이 있는데, 두 기능의 퍼널 데이터를
-                나란히 놓고 보니 명확한 차이가 드러났습니다.
+                당시 SellPage에는 &quot;AI 스튜디오&quot;(이미지 생성)와
+                &quot;AI 디자이너&quot;(상세페이지 제작)라는 두 가지 핵심
+                기능이 있었는데, 두 기능의 퍼널 데이터를 나란히 놓고 보니
+                명확한 차이가 드러났습니다.
               </p>
             </div>
 
@@ -120,10 +120,10 @@ export default function SellPageGrowthCaseStudy() {
                       지표
                     </th>
                     <th className="px-4 py-2 font-[family-name:var(--font-ibm-plex-mono)] text-xs font-medium text-[var(--color-accent)]">
-                      AI 스튜디오
+                      AI 스튜디오 (현 AI 제품 촬영)
                     </th>
                     <th className="px-4 py-2 font-[family-name:var(--font-ibm-plex-mono)] text-xs font-medium text-[var(--color-accent)]">
-                      AI 디자이너
+                      AI 디자이너 (현 AI 상세페이지)
                     </th>
                   </tr>
                 </thead>
@@ -170,19 +170,18 @@ export default function SellPageGrowthCaseStudy() {
                 가설
               </h3>
               <p>
-                AI 스튜디오의 진입률이 더 높은 이유는 히어로 섹션 소제목에
-                &quot;AI 스튜디오&quot;라는 이름이 직접 노출되어 있기
-                때문이었습니다. 하지만 진입한 사용자의 69%가 아무 것도 하지 않고
-                이탈합니다. 반면 AI 디자이너는 &quot;상세페이지 만들기&quot;라는
-                명확한 목적이 이미 사용자에게 전달되어, 들어온 사람의 64%가 바로
-                작업을 시작합니다.
+                &quot;AI 스튜디오&quot;의 진입률이 더 높은 이유는 히어로 섹션
+                소제목에 이름이 직접 노출되어 있기 때문이었습니다. 하지만 진입한
+                사용자의 69%가 아무 것도 하지 않고 이탈합니다. 반면 &quot;AI
+                디자이너&quot;는 들어온 사람의 64%가 바로 작업을 시작합니다.
               </p>
               <p className="mt-2">
-                히어로 섹션의 메인 카피 &quot;스마트폰 사진 한 장으로, 판매 준비
-                끝&quot;이 만든 기대와, 실제로 도착하는 도구 화면 사이에 간극이
-                있다고 판단했습니다. 사용자는 &quot;바로 예쁘게 만들어줘&quot;를
-                기대하는데, 생소한 이름의 도구 앞에서 &quot;공부를 해야
-                하나?&quot;라고 느끼면 이탈합니다.
+                두 기능 모두 &quot;스튜디오&quot;, &quot;디자이너&quot;라는
+                이름이 사용자에게 무엇을 할 수 있는 곳인지 직관적으로
+                전달하지 못하고 있었습니다. 히어로 섹션의 메인 카피
+                &quot;스마트폰 사진 한 장으로, 판매 준비 끝&quot;이 만든
+                기대와, 실제로 도착하는 도구 화면 사이에 간극이 있다고
+                판단했습니다.
               </p>
             </div>
 
@@ -191,11 +190,13 @@ export default function SellPageGrowthCaseStudy() {
                 실행한 것
               </h3>
               <p>
-                서비스 명칭을 사용자의 목적 기준으로 재설계하고, 히어로 섹션의
-                CTA를 &quot;이미지 생성하기&quot;, &quot;상세페이지
-                만들기&quot;처럼 행동 중심으로 변경했습니다. 스튜디오 진입 직후
-                빈 화면 대신 &quot;여기에 사진을 끌어다 놓으세요&quot;라는
-                가이드를 추가해 첫 행동까지의 마찰을 줄였습니다.
+                기능 명칭을 사용자의 목적 기준으로 재설계했습니다. &quot;AI
+                스튜디오&quot;는 &quot;AI 제품 촬영&quot;으로, &quot;AI
+                디자이너&quot;는 &quot;AI 상세페이지&quot;로 변경하여 사용자가
+                이름만 보고도 무엇을 할 수 있는 기능인지 바로 알 수 있도록
+                했습니다. 동시에 진입 직후 빈 화면 대신 &quot;여기에 사진을
+                끌어다 놓으세요&quot;라는 가이드를 추가해 첫 행동까지의 마찰을
+                줄였습니다.
               </p>
             </div>
 
@@ -286,7 +287,7 @@ export default function SellPageGrowthCaseStudy() {
             Case 03
           </p>
           <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 mb-4 text-[var(--color-primary)]">
-            Google Ads 키워드/소재 실험 → CTR 11.19% 달성
+            Google Ads PMax 3.30% → 검색 캠페인 11.19% — 모니터링이 만든 차이
           </h2>
 
           <div className="space-y-4 text-body-small text-[var(--neutral-500)]">
@@ -295,43 +296,90 @@ export default function SellPageGrowthCaseStudy() {
                 문제 발견
               </h3>
               <p>
-                초기 Google Ads 캠페인의 CTR이 업계 평균 수준에 머물러 있었고,
-                한정된 광고 예산으로 최대한의 유입을 만들어야 하는
-                상황이었습니다.
+                Google Ads를 처음 사용해봤습니다. 광고를 세팅하고 돌리기
+                시작했는데, 며칠 뒤 광고 실적을 모니터링하던 중 이상한 점을
+                발견했습니다. 광고가 게재되고 있는 사이트가 맞고 게임 사이트나
+                유튜브 같은, 서비스 타겟과 전혀 관련 없는 곳이었습니다. CTR은
+                3.30%로 나쁘지 않았지만 유입의 질이 의심됐습니다.
               </p>
             </div>
 
             <div>
               <h3 className="mb-1 font-semibold text-[var(--color-primary)]">
-                가설
+                원인 분석
               </h3>
               <p>
-                &quot;타겟 키워드와 소재 카피가 실제 사용자의 검색 의도와
-                일치하지 않는다. 셀러의 실제 페인포인트(촬영 비용, 시간)를 직접
-                언급하면 CTR이 올라갈 것이다.&quot;
+                더 공부해보니 제가 설정한 캠페인이 PMax(Performance Max)라는
+                유형이었습니다. PMax는 Google이 자동으로 여러 지면에 광고를
+                배포하는 방식이라, 셀러가 주로 검색하는 키워드와 무관한 곳에도
+                노출되고 있었습니다. 처음이라 캠페인 유형의 차이를 모른 채
+                시작한 것이 원인이었습니다.
               </p>
             </div>
 
             <div>
               <h3 className="mb-1 font-semibold text-[var(--color-primary)]">
-                실험
+                실행한 것
               </h3>
               <p>
-                키워드를 세분화하고, 광고 소재를 &quot;상품 사진 촬영 비용
-                절감&quot;, &quot;AI로 상세페이지 자동 생성&quot; 등 구체적인
-                베네핏 중심으로 A/B 테스트했습니다. 성과가 낮은 키워드는 빠르게
-                제외하고, 전환이 발생하는 키워드에 예산을 집중했습니다.
+                PMax 캠페인을 중단하고, 타겟 사용자가 실제로 검색할 만한
+                키워드를 직접 설정하는 검색 캠페인으로 전환했습니다. &quot;상품
+                사진 촬영&quot;, &quot;상세페이지 제작&quot; 등 셀러의
+                페인포인트와 직결되는 키워드를 선별하고, 성과가 낮은 키워드는
+                빠르게 제외하며 예산을 집중했습니다.
               </p>
+            </div>
+
+            {/* Before/After 비교 */}
+            <div className="my-4 overflow-hidden border border-[var(--neutral-300)]">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="border-b border-[var(--neutral-300)] bg-[var(--neutral-300)]/50">
+                    <th className="px-4 py-2 font-[family-name:var(--font-ibm-plex-mono)] text-xs font-medium text-[var(--neutral-500)]">
+                      지표
+                    </th>
+                    <th className="px-4 py-2 font-[family-name:var(--font-ibm-plex-mono)] text-xs font-medium text-[var(--neutral-500)]">
+                      PMax (Before)
+                    </th>
+                    <th className="px-4 py-2 font-[family-name:var(--font-ibm-plex-mono)] text-xs font-medium text-[var(--color-accent)]">
+                      검색 캠페인 (After)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="font-[family-name:var(--font-ibm-plex-mono)] text-xs">
+                  <tr className="border-b border-[var(--neutral-300)]">
+                    <td className="px-4 py-2 text-[var(--neutral-500)]">CTR</td>
+                    <td className="px-4 py-2 text-[var(--neutral-500)]">
+                      3.30%
+                    </td>
+                    <td className="px-4 py-2 text-[var(--color-accent)]">
+                      11.19%
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-2 text-[var(--neutral-500)]">
+                      노출 지면
+                    </td>
+                    <td className="px-4 py-2 text-[var(--neutral-500)]">
+                      자동 배포 (비관련 사이트 포함)
+                    </td>
+                    <td className="px-4 py-2 text-[var(--color-primary)]">
+                      타겟 키워드 검색 결과
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
             <div>
               <h3 className="mb-1 font-semibold text-[var(--color-primary)]">
-                결과
+                인사이트
               </h3>
               <p>
-                CTR 11.19%를 달성하며 ROAS가 유의미하게 개선되었습니다. 소규모
-                예산으로도 효율적인 유입 채널을 확보할 수 있었고, 이 데이터를
-                기반으로 향후 마케팅 예산 배분 기준을 수립했습니다.
+                처음 해보는 영역이라 실수가 있었지만, 광고비를 쓰고 끝내는 게
+                아니라 실적을 직접 모니터링했기 때문에 문제를 빠르게 발견할 수
+                있었습니다. &quot;모르면 배우고, 배웠으면 바로 고친다&quot;는
+                원칙을 그로스 영역에서도 동일하게 적용한 경험이었습니다.
               </p>
             </div>
           </div>
@@ -370,29 +418,15 @@ export default function SellPageGrowthCaseStudy() {
             </p>
             <p>
               <strong className="text-[var(--color-primary)]">
-                사용자와 직접 대화하는 것의 가치.
+                VOC 1건이 시스템을 만든다.
               </strong>{' '}
-              커피챗을 통해 마케터들의 실제 페인포인트 5개를 발견하고 그 중 3개를
-              해결했습니다. 정량 데이터가 &quot;무엇&quot;을 알려준다면, 정성
-              데이터는 &quot;왜&quot;를 알려줍니다.
-            </p>
-          </div>
-        </section>
-
-        {/* 다음에 할 것 */}
-        <section className="mb-12">
-          <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 mb-4 text-[var(--color-primary)]">
-            다음에 할 것
-          </h2>
-          <div className="space-y-3 text-body-small text-[var(--neutral-500)]">
-            <p>
-              리텐션 지표를 더 깊이 파고들 계획입니다. 현재는 신규 유입과 전환에
-              집중했지만, 다음 단계는 재방문율과 기능별 사용 빈도를 분석하여
-              고착도(stickiness)를 높이는 것입니다.
-            </p>
-            <p>
-              또한 VOC에서 나온 피드백 중 아직 해결하지 못한 페인포인트 2개에
-              대해 우선순위를 재설정하고, 다음 분기 로드맵에 반영할 예정입니다.
+              한 사용자와 이메일로 지속적으로 피드백을 주고받으며, 제품 개선으로
+              이어진 2건을 우선 처리했습니다. 이미지 다운로드 중복 실행 버그는
+              클릭 방지 로직과 로딩 UI를 추가해 해결했고, AI 이미지 글자 깨짐
+              문제는 저화질 이미지 경고 토스트를 추가하는 동시에
+              image_upload_logs 테이블을 만들어 메타데이터(용량, 해상도)를
+              로깅하는 시스템을 구축했습니다. 단발성 CS 대응이 아니라, 향후
+              패턴 분석이 가능한 구조로 만든 것이 핵심이었습니다.
             </p>
           </div>
         </section>
