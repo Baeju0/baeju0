@@ -14,7 +14,7 @@ const nowShipping = [
     ],
     status: 'live' as const,
     href: 'https://www.sellpage.life',
-    lastUpdated: '2026.01.20',
+    lastUpdated: '2026.02.20',
   },
   {
     id: 'PRD-002',
