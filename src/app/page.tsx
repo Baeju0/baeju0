@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Navigation, ProductCard, Button, SocialLink } from '@/components';
 
 const nowShipping = [
@@ -7,9 +8,9 @@ const nowShipping = [
     description:
       '스마트폰 촬영본 한 장으로 연출컷 생성부터 상세페이지 제작까지, 상품 런칭의 전 과정을 자동화하는 AI 스튜디오.',
     impact: [
-      '출시 3개월 만에 누적 사용자 141명, 유료 결제 6건',
-      'AI 스튜디오/상세페이지 생성 258건 (기능 검증 완료)',
-      '촬영/디자인 외주 비용 없이 판매를 시작하는 시장 수요 검증 중',
+      '누적 사용자 152명, 유료 결제 전환율 4.2%',
+      'UX 개선으로 보너스 사용률 0% → 100% 달성',
+      'Google Ads 최적화를 통해 CTR 11.19% 달성',
     ],
     status: 'live' as const,
     href: 'https://www.sellpage.life',
@@ -23,9 +24,9 @@ const nowShipping = [
     impact: [
       'Vision AI를 활용하여 다중 이미지의 시간/공간적 흐름을 분석하고 스토리텔링 구성',
       '네이버/카카오맵 API 연동으로 장소 리뷰 데이터를 수집하고, 이미지 키워드와 매칭하여 콘텐츠에 최적화된 형태로 반영',
-      '사용자 과거 글 분석을 통한 퍼스널 톤앤매너(어휘/문체) 학습 및 반영',
+      'B2C 블로그 자동화 도구로 시작했으나, 시장 반응 부재 확인 후 B2B SaaS(SellPage)로 방향 전환. 피봇 의사결정 경험.',
     ],
-    status: 'live' as const,
+    status: 'archived' as const,
     href: 'https://fastpost.life',
     lastUpdated: '2025.11.12',
   },
@@ -158,6 +159,76 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="case-studies" className="section-divider">
+        <div className="mx-auto max-w-[1200px] px-4 py-16 md:px-10">
+          <div className="sticky top-14 z-40 -mx-4 mb-8 border-b border-[var(--neutral-300)] bg-[var(--neutral-200)]/95 px-4 py-4 backdrop-blur-sm md:-mx-10 md:px-10">
+            <div className="flex items-center justify-between">
+              <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h2 text-[var(--color-primary)]">
+                Case Studies
+              </h2>
+              <span className="font-[family-name:var(--font-ibm-plex-mono)] text-caption text-[var(--neutral-500)]">
+                1 Article
+              </span>
+            </div>
+          </div>
+
+          <Link
+            href="/case-studies/sellpage-growth"
+            className="group block border border-[var(--neutral-300)] bg-[var(--neutral-200)] transition-colors card-hover"
+          >
+            <div className="flex items-center justify-between border-b border-[var(--neutral-300)] px-4 py-3">
+              <span className="font-[family-name:var(--font-ibm-plex-mono)] text-xs text-[var(--neutral-500)]">
+                PRD-001 · SellPage
+              </span>
+              <span className="font-[family-name:var(--font-ibm-plex-mono)] text-xs text-[var(--color-accent)]">
+                2026.02
+              </span>
+            </div>
+            <div className="p-6">
+              <h3 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 mb-2 text-[var(--color-primary)]">
+                SellPage 출시 3개월, 그로스를 직접 돌려본 기록
+              </h3>
+              <p className="text-body-small mb-4 text-[var(--neutral-500)]">
+                Mixpanel 퍼널 분석, Google Ads 키워드 최적화, 서비스명 A/B
+                테스트까지 — 1인 개발자가 직접 그로스를 돌리며 배운 것들.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {['퍼널 분석', 'CTR 최적화', 'A/B 테스트', 'VOC'].map(
+                  (tag) => (
+                    <span
+                      key={tag}
+                      className="border border-[var(--neutral-300)] px-2 py-1 font-[family-name:var(--font-ibm-plex-mono)] text-xs text-[var(--neutral-500)]"
+                    >
+                      {tag}
+                    </span>
+                  )
+                )}
+              </div>
+            </div>
+            <div className="flex items-center justify-end border-t border-[var(--neutral-300)] px-4 py-3">
+              <span className="inline-flex items-center gap-1 font-[family-name:var(--font-ibm-plex-mono)] text-sm font-medium text-[var(--color-primary)] transition-colors group-hover:text-[var(--color-accent)]">
+                Read Case Study
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="transition-transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 12L10 8L6 4"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="square"
+                  />
+                </svg>
+              </span>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       <section id="values" className="section-divider">
         <div className="mx-auto max-w-[1200px] px-4 py-16 md:px-10">
           <div className="sticky top-14 z-40 -mx-4 mb-8 border-b border-[var(--neutral-300)] bg-[var(--neutral-200)]/95 px-4 py-4 backdrop-blur-sm md:-mx-10 md:px-10">
@@ -209,8 +280,9 @@ export default function Home() {
                 시각화하며, 1인 개발의 한계를 넘어선 생산성을 만들어냅니다.
                 <br />
                 <br />
-                혼자만의 빠른 실행을 넘어, 이제는 팀과 함께 더 깊이 있는 기술적
-                고민과 견고한 가치를 만들어가는 과정을 기다리고 있습니다.
+                혼자만의 빠른 실행을 넘어, 이제는 팀과 함께 사용자 문제를 더 깊이
+                파고들고, 지속 가능한 성장을 데이터와 함께 만들어가는 과정을
+                기다리고 있습니다.
               </p>
             </div>
 

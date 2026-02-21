@@ -23,6 +23,12 @@ export function Navigation() {
               Products
             </Link>
             <Link
+              href="#case-studies"
+              className="text-[var(--neutral-500)] transition-colors hover:text-[var(--color-primary)]"
+            >
+              Cases
+            </Link>
+            <Link
               href="#values"
               className="text-[var(--neutral-500)] transition-colors hover:text-[var(--color-primary)]"
             >
