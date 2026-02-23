@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { StatusBadge } from './StatusBadge';
 import { trackEvent } from '@/lib/mixpanel';
 
-type Status = 'live' | 'beta' | 'concept' | 'retired';
+type Status = 'live' | 'beta' | 'concept' | 'retired' | 'archived';
 
 interface ProductCardProps {
   id: string;

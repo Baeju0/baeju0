@@ -1,4 +1,4 @@
-type Status = 'live' | 'beta' | 'concept' | 'retired';
+type Status = 'live' | 'beta' | 'concept' | 'retired' | 'archived';
 
 interface StatusBadgeProps {
   status: Status;
@@ -28,6 +28,11 @@ const statusConfig: Record<
     label: 'Retired',
     color: 'bg-[var(--color-retired)]/10 text-[var(--color-retired)]',
     dotClass: 'bg-[var(--color-retired)]',
+  },
+  archived: {
+    label: 'Archived',
+    color: 'bg-[var(--color-archived)]/10 text-[var(--color-archived)]',
+    dotClass: 'bg-[var(--color-archived)]',
   },
 };
 
