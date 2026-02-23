@@ -7,12 +7,12 @@ const skillCategories = [
   {
     id: 'backend',
     label: 'Backend / Infra',
-    skills: ['Supabase', 'PostgreSQL', 'Vercel', 'REST API'],
+    skills: ['Supabase', 'Vercel', 'REST API'],
   },
   {
     id: 'ai',
     label: 'AI / Data',
-    skills: ['Gemini API', 'Vision AI', 'Mixpanel', 'Kakao Map API'],
+    skills: ['Gemini API', 'Google Cloud Vision API', 'Mixpanel', 'Kakao Map API'],
   },
 ];
 
