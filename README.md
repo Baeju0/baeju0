@@ -24,8 +24,9 @@
 
 ### 1. [SellPage](https://www.sellpage.life)
 > **상품 런칭의 전 과정을 자동화하는 AI 스튜디오**
-- **Impact:** 출시 2개월 만에 유료 결제 전환 성공, 150건 이상의 상세페이지 생성
-- **Status:** Live & 시장 수요 검증 중
+- **Impact:** 누적 사용자 171명 · 유료 결제 9건 · 생성 페이지 320개 (AI 제품촬영 181, AI 디자이너 139)
+- **Growth:** 광고 중단 후 SEO 콘텐츠 전략으로 오가닉 가입 · 결제 지속 발생
+- **Status:** Live & 오가닉 성장 중
 
 ### 2. [FastPost](https://fastpost.life)
 > **다중 이미지 흐름 기반 스토리텔링 및 개인화 글쓰기 에이전트**
@@ -58,4 +59,4 @@
 
 ---
 
-© 2025 Baeju0 Labs. All rights reserved.
+© 2026 Baeju0 Labs. All rights reserved.

@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { Navigation } from '@/components';
 
 export const metadata: Metadata = {
-  title: 'SellPage 출시 3개월, 그로스를 직접 돌려본 기록 | Baeju0 Labs',
+  title: 'SellPage 출시 5개월, 그로스를 직접 돌려본 기록 | Baeju0 Labs',
   description:
-    'AI 상품 사진/상세페이지 SaaS SellPage의 출시 후 3개월간 그로스 실험 기록. Mixpanel 퍼널 분석, Google Ads 최적화, 전환율 개선 케이스.',
+    'AI 상품 사진/상세페이지 SaaS SellPage의 출시 후 5개월간 그로스 실험 기록. Mixpanel 퍼널 분석, Google Ads 최적화, 광고 중단 후 오가닉 성장 케이스.',
 };
 
 export default function SellPageGrowthCaseStudy() {
@@ -40,12 +40,12 @@ export default function SellPageGrowthCaseStudy() {
             Case Study · PRD-001
           </p>
           <h1 className="font-[family-name:var(--font-space-grotesk)] text-display-h1 mb-4 text-[var(--color-primary)]">
-            SellPage 출시 3개월,
+            SellPage 출시 5개월,
             <br />
             그로스를 직접 돌려본 기록
           </h1>
           <p className="font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--neutral-500)]">
-            2026.02 · 읽는 시간 약 5분
+            2026.03 · 읽는 시간 약 7분
           </p>
         </div>
 
@@ -67,10 +67,10 @@ export default function SellPageGrowthCaseStudy() {
           </h2>
           <div className="grid grid-cols-2 gap-px border border-[var(--neutral-300)] bg-[var(--neutral-300)] md:grid-cols-4">
             {[
-              { label: '누적 사용자', value: '152명' },
-              { label: '유료 전환율', value: '4.2%' },
-              { label: '보너스 사용률', value: '0→100%' },
-              { label: 'Google Ads CTR', value: '11.19%' },
+              { label: '누적 사용자', value: '171명' },
+              { label: '누적 결제', value: '9건' },
+              { label: '생성 페이지', value: '320개' },
+              { label: '오가닉 전환율', value: '11.1%' },
             ].map((metric) => (
               <div
                 key={metric.label}
@@ -380,6 +380,114 @@ export default function SellPageGrowthCaseStudy() {
                 아니라 실적을 직접 모니터링했기 때문에 문제를 빠르게 발견할 수
                 있었습니다. &quot;모르면 배우고, 배웠으면 바로 고친다&quot;는
                 원칙을 그로스 영역에서도 동일하게 적용한 경험이었습니다.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Case 4: 오가닉 그로스 */}
+        <section className="mb-12 border-l-2 border-[var(--color-accent)] pl-6">
+          <p className="text-caption mb-2 text-[var(--color-accent)]">
+            Case 04
+          </p>
+          <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 mb-4 text-[var(--color-primary)]">
+            광고비 0원, 오가닉 전환율 11.1% — 콘텐츠가 만든 자생력
+          </h2>
+
+          <div className="space-y-4 text-body-small text-[var(--neutral-500)]">
+            <div>
+              <h3 className="mb-1 font-semibold text-[var(--color-primary)]">
+                배경
+              </h3>
+              <p>
+                출시 후 약 2개월간(2025.11~2026.01) Google Ads 검색 캠페인을
+                운영하며 135명의 가입자와 5건의 유료 결제를 만들었습니다.
+                하지만 마케팅 예산이 소진되면서 광고를 완전히 중단해야 했습니다.
+                유입이 0이 되는 상황이 예상됐고, 광고 없이 제품이 살아남을 수
+                있는지가 핵심 질문이었습니다.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="mb-1 font-semibold text-[var(--color-primary)]">
+                실행한 것
+              </h3>
+              <p>
+                광고 대신 선택한 전략은 SEO 기반의 콘텐츠 마케팅이었습니다.
+                매주 홈페이지 내에 &quot;AI 상품 촬영 가이드&quot;,
+                &quot;상세페이지 제작 팁&quot; 등 타겟 사용자의 검색 의도에
+                맞춘 가이드 콘텐츠를 꾸준히 작성했습니다. 셀러들이 실제로
+                검색하는 키워드를 중심으로, 제품 사용법과 자연스럽게 연결되는
+                콘텐츠를 설계했습니다.
+              </p>
+            </div>
+
+            {/* Before/After 비교 */}
+            <div className="my-4 overflow-hidden border border-[var(--neutral-300)]">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="border-b border-[var(--neutral-300)] bg-[var(--neutral-300)]/50">
+                    <th className="px-4 py-2 font-[family-name:var(--font-ibm-plex-mono)] text-xs font-medium text-[var(--neutral-500)]">
+                      지표
+                    </th>
+                    <th className="px-4 py-2 font-[family-name:var(--font-ibm-plex-mono)] text-xs font-medium text-[var(--neutral-500)]">
+                      Ads 기간 (2개월)
+                    </th>
+                    <th className="px-4 py-2 font-[family-name:var(--font-ibm-plex-mono)] text-xs font-medium text-[var(--color-accent)]">
+                      오가닉 기간 (2개월)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="font-[family-name:var(--font-ibm-plex-mono)] text-xs">
+                  <tr className="border-b border-[var(--neutral-300)]">
+                    <td className="px-4 py-2 text-[var(--neutral-500)]">
+                      신규 가입
+                    </td>
+                    <td className="px-4 py-2 text-[var(--neutral-500)]">
+                      135명
+                    </td>
+                    <td className="px-4 py-2 text-[var(--color-accent)]">
+                      36명
+                    </td>
+                  </tr>
+                  <tr className="border-b border-[var(--neutral-300)]">
+                    <td className="px-4 py-2 text-[var(--neutral-500)]">
+                      유료 결제
+                    </td>
+                    <td className="px-4 py-2 text-[var(--neutral-500)]">
+                      5건
+                    </td>
+                    <td className="px-4 py-2 text-[var(--color-accent)]">
+                      4건
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-2 text-[var(--neutral-500)]">
+                      전환율
+                    </td>
+                    <td className="px-4 py-2 text-[var(--neutral-500)]">
+                      3.7%
+                    </td>
+                    <td className="px-4 py-2 text-[var(--color-accent)]">
+                      11.1%
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div>
+              <h3 className="mb-1 font-semibold text-[var(--color-primary)]">
+                인사이트
+              </h3>
+              <p>
+                광고를 끈 뒤에도 2개월간 36명이 가입하고 4건의 결제가
+                발생했습니다. 오가닉 전환율 11.1%는 Ads 기간(3.7%) 대비 약
+                3배 높은 수치였습니다. 광고를 통해 들어온 사용자는 &quot;한번
+                써볼까&quot;라는 호기심 기반이었던 반면, 가이드 콘텐츠를 읽고
+                유입된 사용자는 이미 문제를 인식하고 해결책을 찾는
+                상태였기 때문입니다. 마케팅 예산 없이도 제품이 자생할 수
+                있는 구조를 만든 것이 가장 큰 성과였습니다.
               </p>
             </div>
           </div>
