@@ -8,13 +8,13 @@ const nowShipping = [
     description:
       '스마트폰 촬영본 한 장으로 연출컷 생성부터 상세페이지 제작까지, 상품 런칭의 전 과정을 자동화하는 AI 스튜디오.',
     impact: [
-      '누적 사용자 152명, 유료 결제 전환율 4.2%',
-      'UX 개선으로 보너스 사용률 0% → 100% 달성',
-      'Google Ads 최적화를 통해 CTR 11.19% 달성',
+      '누적 사용자 171명 · 유료 결제 9건 · 생성 페이지 320개',
+      '광고 중단 후 SEO 콘텐츠 전략으로 오가닉 가입 · 결제 지속 발생',
+      'UX 개선으로 보너스 사용률 0% → 100%, Google Ads CTR 11.19%',
     ],
     status: 'live' as const,
     href: 'https://www.sellpage.life',
-    lastUpdated: '2026.02.20',
+    lastUpdated: '2026.03.14',
   },
   {
     id: 'PRD-002',
@@ -181,19 +181,19 @@ export default function Home() {
                 PRD-001 · SellPage
               </span>
               <span className="font-[family-name:var(--font-ibm-plex-mono)] text-xs text-[var(--color-accent)]">
-                2026.02
+                2026.03
               </span>
             </div>
             <div className="p-6">
               <h3 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 mb-2 text-[var(--color-primary)]">
-                SellPage 출시 3개월, 그로스를 직접 돌려본 기록
+                SellPage 출시 5개월, 그로스를 직접 돌려본 기록
               </h3>
               <p className="text-body-small mb-4 text-[var(--neutral-500)]">
-                Mixpanel 퍼널 분석, Google Ads 키워드 최적화, 서비스명 A/B
-                테스트까지 — 1인 개발자가 직접 그로스를 돌리며 배운 것들.
+                Mixpanel 퍼널 분석, Google Ads 최적화, 광고 중단 후 오가닉
+                성장까지 — 1인 개발자가 직접 그로스를 돌리며 배운 것들.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['퍼널 분석', 'CTR 최적화', 'A/B 테스트', 'VOC'].map(
+                {['퍼널 분석', 'CTR 최적화', 'A/B 테스트', '오가닉 그로스'].map(
                   (tag) => (
                     <span
                       key={tag}
