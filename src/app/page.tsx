@@ -8,13 +8,13 @@ const nowShipping = [
     description:
       '스마트폰 촬영본 한 장으로 연출컷 생성부터 상세페이지 제작까지, 상품 런칭의 전 과정을 자동화하는 AI 스튜디오.',
     impact: [
-      '누적 사용자 171명 · 유료 결제 9건 · 생성 페이지 320개',
+      '누적 사용자 172명 · 유료 결제 11건 · 생성 페이지 322개',
       '광고 중단 후 SEO 콘텐츠 전략으로 오가닉 가입 · 결제 지속 발생',
       'UX 개선으로 보너스 사용률 0% → 100%, Google Ads CTR 11.19%',
     ],
     status: 'live' as const,
     href: 'https://www.sellpage.life',
-    lastUpdated: '2026.03.14',
+    lastUpdated: '2026.03.15',
   },
   {
     id: 'PRD-002',

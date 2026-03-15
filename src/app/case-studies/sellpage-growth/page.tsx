@@ -67,10 +67,10 @@ export default function SellPageGrowthCaseStudy() {
           </h2>
           <div className="grid grid-cols-2 gap-px border border-[var(--neutral-300)] bg-[var(--neutral-300)] md:grid-cols-4">
             {[
-              { label: '누적 사용자', value: '171명' },
-              { label: '누적 결제', value: '9건' },
-              { label: '생성 페이지', value: '320개' },
-              { label: '오가닉 전환율', value: '11.1%' },
+              { label: '누적 사용자', value: '172명' },
+              { label: '누적 결제', value: '11건' },
+              { label: '생성 페이지', value: '322개' },
+              { label: '오가닉 전환율', value: '16.2%' },
             ].map((metric) => (
               <div
                 key={metric.label}
@@ -391,7 +391,7 @@ export default function SellPageGrowthCaseStudy() {
             Case 04
           </p>
           <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 mb-4 text-[var(--color-primary)]">
-            광고비 0원, 오가닉 전환율 11.1% — 콘텐츠가 만든 자생력
+            광고비 0원, 오가닉 전환율 16.2% — 콘텐츠가 만든 자생력
           </h2>
 
           <div className="space-y-4 text-body-small text-[var(--neutral-500)]">
@@ -447,7 +447,7 @@ export default function SellPageGrowthCaseStudy() {
                       135명
                     </td>
                     <td className="px-4 py-2 text-[var(--color-accent)]">
-                      36명
+                      37명
                     </td>
                   </tr>
                   <tr className="border-b border-[var(--neutral-300)]">
@@ -458,7 +458,7 @@ export default function SellPageGrowthCaseStudy() {
                       5건
                     </td>
                     <td className="px-4 py-2 text-[var(--color-accent)]">
-                      4건
+                      6건
                     </td>
                   </tr>
                   <tr>
@@ -469,7 +469,7 @@ export default function SellPageGrowthCaseStudy() {
                       3.7%
                     </td>
                     <td className="px-4 py-2 text-[var(--color-accent)]">
-                      11.1%
+                      16.2%
                     </td>
                   </tr>
                 </tbody>
@@ -481,9 +481,9 @@ export default function SellPageGrowthCaseStudy() {
                 인사이트
               </h3>
               <p>
-                광고를 끈 뒤에도 2개월간 36명이 가입하고 4건의 결제가
-                발생했습니다. 오가닉 전환율 11.1%는 Ads 기간(3.7%) 대비 약
-                3배 높은 수치였습니다. 광고를 통해 들어온 사용자는 &quot;한번
+                광고를 끈 뒤에도 2개월간 37명이 가입하고 6건의 결제가
+                발생했습니다. 오가닉 전환율 16.2%는 Ads 기간(3.7%) 대비 약
+                4.4배 높은 수치였습니다. 광고를 통해 들어온 사용자는 &quot;한번
                 써볼까&quot;라는 호기심 기반이었던 반면, 가이드 콘텐츠를 읽고
                 유입된 사용자는 이미 문제를 인식하고 해결책을 찾는
                 상태였기 때문입니다. 마케팅 예산 없이도 제품이 자생할 수
