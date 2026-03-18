@@ -20,7 +20,7 @@ export function Navigation() {
               href="#now-shipping"
               className="text-[var(--neutral-500)] transition-colors hover:text-[var(--color-primary)]"
             >
-              Products
+              Projects
             </Link>
             <Link
               href="#case-studies"

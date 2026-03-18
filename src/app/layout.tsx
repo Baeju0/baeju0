@@ -19,12 +19,12 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://baeju0.blog'),
-  title: 'Baeju0 Labs | 제품을 만드는 Product Engineer',
+  title: 'Baeju0 Labs | 기획부터 배포·운영까지 경험한 Frontend Engineer',
   description:
-    'Small experiments, solid products, transparent records. 작은 실험들, 단단한 제품들, 투명한 기록들.',
+    '기획부터 배포, 운영까지 서비스의 전 과정을 직접 경험한 프론트엔드 엔지니어 포트폴리오.',
   openGraph: {
     title: 'Baeju0 Labs',
-    description: '1인 개발자의 실험실',
+    description: '기획부터 배포·운영까지 직접 경험한 프론트엔드 엔지니어',
     locale: 'ko_KR',
     type: 'website',
     images: ['/og-image.jpeg'],

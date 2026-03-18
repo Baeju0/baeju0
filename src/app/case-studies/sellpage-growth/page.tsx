@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { Navigation } from '@/components';
 
 export const metadata: Metadata = {
-  title: 'SellPage 출시 5개월, 그로스를 직접 돌려본 기록 | Baeju0 Labs',
+  title: '실서비스 운영에서 만난 문제들과 해결 과정 | Baeju0 Labs',
   description:
-    'AI 상품 사진/상세페이지 SaaS SellPage의 출시 후 5개월간 그로스 실험 기록. Mixpanel 퍼널 분석, Google Ads 최적화, 광고 중단 후 오가닉 성장 케이스.',
+    'B2B SaaS SellPage 운영 과정에서 만난 UX 병목, API 최적화, SEO 전환 등 기술적 문제를 데이터 기반으로 해결한 과정.',
 };
 
 export default function SellPageGrowthCaseStudy() {
@@ -34,15 +34,15 @@ export default function SellPageGrowthCaseStudy() {
                 strokeLinecap="square"
               />
             </svg>
-            Products
+            Projects
           </Link>
           <p className="text-caption mb-3 text-[var(--color-accent)]">
             Case Study · PRD-001
           </p>
           <h1 className="font-[family-name:var(--font-space-grotesk)] text-display-h1 mb-4 text-[var(--color-primary)]">
-            SellPage 출시 5개월,
+            실서비스 운영에서 만난
             <br />
-            그로스를 직접 돌려본 기록
+            문제들과 해결 과정
           </h1>
           <p className="font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--neutral-500)]">
             2026.03 · 읽는 시간 약 7분

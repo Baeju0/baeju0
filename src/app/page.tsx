@@ -6,11 +6,11 @@ const nowShipping = [
     id: 'PRD-001',
     title: 'SellPage',
     description:
-      '스마트폰 촬영본 한 장으로 연출컷 생성부터 상세페이지 제작까지, 상품 런칭의 전 과정을 자동화하는 AI 스튜디오.',
+      'AI 제품 이미지 생성부터 상세페이지 제작까지, 상품 런칭을 자동화하는 B2B SaaS. Next.js + Supabase로 설계하고 직접 운영 중.',
     impact: [
-      '누적 사용자 172명 · 유료 결제 11건 · 생성 페이지 322개',
-      '광고 중단 후 SEO 콘텐츠 전략으로 오가닉 가입 · 결제 지속 발생',
-      'UX 개선으로 보너스 사용률 0% → 100%, Google Ads CTR 11.19%',
+      'Next.js App Router · Supabase · Vercel 기반 풀스택 구성',
+      'Gemini API 연동, 이미지 생성 파이프라인 및 에러 핸들링',
+      'Mixpanel 퍼널 분석 → UX 개선 (보너스 사용률 0% → 100%)',
     ],
     status: 'live' as const,
     href: 'https://www.sellpage.life',
@@ -20,11 +20,11 @@ const nowShipping = [
     id: 'PRD-002',
     title: 'FastPost',
     description:
-      '업로드한 여러 장의 사진 순서와 장소 정보를 바탕으로, 기승전결이 있는 블로그 포스팅 초안을 완성해 주는 개인화 글쓰기 에이전트.',
+      '사진과 장소 정보를 기반으로 블로그 포스팅 초안을 자동 생성하는 웹 앱. Vision API · 카카오맵 API 연동.',
     impact: [
-      'Google Cloud Vision API를 활용하여 다중 이미지의 시간/공간적 흐름을 분석하고 스토리텔링 구성',
-      '네이버/카카오맵 API 연동으로 장소 리뷰 데이터를 수집하고, 이미지 키워드와 매칭하여 콘텐츠에 최적화된 형태로 반영',
-      'B2C 블로그 자동화 도구로 시작했으나, 시장 반응 부재 확인 후 B2B SaaS(SellPage)로 방향 전환. 피봇 의사결정 경험.',
+      'Google Cloud Vision API로 이미지 메타데이터 파싱 및 순서 정렬',
+      '카카오맵 API 연동, 좌표 기반 장소 검색 및 리뷰 매칭',
+      'B2C → B2B 피봇 과정에서 사용자 피드백 기반 의사결정',
     ],
     status: 'archived' as const,
     href: 'https://fastpost.life',
@@ -35,27 +35,27 @@ const nowShipping = [
 const values = [
   {
     number: '01',
-    title: '기술보다 비즈니스 임팩트',
+    title: '안정적인 서비스 운영',
     description:
-      '화려한 최신 기술 도입 그 자체보다는, 비즈니스 문제를 가장 확실하고 효율적으로 해결하는 적정 기술을 지향합니다.',
+      '새 기능보다 기존 서비스의 안정성을 우선합니다. 에러 핸들링, 로깅, 모니터링으로 문제를 사전에 감지하는 구조를 지향합니다.',
   },
   {
     number: '02',
-    title: 'AI를 도구가 아닌 동료로',
+    title: '데이터 기반 의사결정',
     description:
-      '단순 코딩 보조를 넘어, 기획과 설계를 함께 논의하는 파트너로 대합니다. 모호한 아이디어를 구체적인 문서와 구조로 빠르게 시각화하여 개발의 완성도를 높입니다.',
+      '감이 아닌 데이터로 판단합니다. 퍼널 분석과 사용자 행동 로그로 개선 방향을 설정하고 결과를 측정합니다.',
   },
   {
     number: '03',
-    title: '만드는 편함보다 쓰는 경험',
+    title: '사용자 경험 중심 개발',
     description:
-      '개발자에게 편한 로직보다 사용자에게 편한 경험(UX)을 선택합니다. 사용자의 시간을 1초라도 아끼기 위해 기꺼이 번거로움을 감수합니다.',
+      '개발자에게 편한 구조보다 사용자에게 자연스러운 경험을 선택합니다. UX 문제를 기술로 해결합니다.',
   },
   {
     number: '04',
-    title: '완벽한 준비보다 빠른 실행',
+    title: '실행하며 배우기',
     description:
-      '책상 앞의 거대한 계획보다 시장에서의 작은 실험을 신뢰합니다. 빠르게 만들고, 빠르게 검증하고, 데이터로 배웁니다.',
+      '완벽히 익힌 뒤 시작하기보다, 먼저 실행하고 부딪히며 배웁니다. 모르는 영역도 일단 해보고, 문제를 만나면 그때 깊이 파고듭니다.',
   },
 ];
 
@@ -69,23 +69,23 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-12">
             <div className="md:col-span-8">
               <p className="text-caption mb-4 text-[var(--neutral-500)]">
-                Product Engineer
+                Frontend Engineer
               </p>
               <h1 className="font-[family-name:var(--font-space-grotesk)] text-display-h1 mb-6 text-[var(--color-primary)]">
                 <span className="text-[var(--color-primary)]">Baeju0</span>
                 <span className="text-[var(--neutral-500)]"> Labs</span>
               </h1>
               <p className="text-body-large max-w-xl text-[var(--neutral-500)]">
-                가설 검증부터 배포까지 주도하는{' '}
-                <strong>Product Engineer Baeju0</strong>의 작업실입니다.
+                기획부터 배포·운영까지 직접 경험한{' '}
+                <strong>Frontend Engineer Baeju0</strong>의
+                포트폴리오입니다.
                 <br />
-                기술로 비즈니스 문제를 해결하고, 실제 시장에서 동작하는 제품을
-                만듭니다.
+                실서비스를 만들고 운영하며 기술로 문제를 해결합니다.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a href="#now-shipping">
-                  <Button variant="primary">운영 중인 제품 보기</Button>
+                  <Button variant="primary">프로젝트 보기</Button>
                 </a>
               </div>
 
@@ -119,7 +119,7 @@ export default function Home() {
             <div className="flex flex-col gap-4 border-l border-[var(--neutral-300)] pl-6 md:col-span-4">
               <div>
                 <p className="text-caption mb-1 text-[var(--neutral-500)]">
-                  Now Shipping
+                  Projects
                 </p>
                 <p className="font-[family-name:var(--font-space-grotesk)] text-display-h2 text-[var(--color-primary)]">
                   {nowShipping.length}
@@ -143,10 +143,10 @@ export default function Home() {
           <div className="sticky top-14 z-40 -mx-4 mb-8 border-b border-[var(--neutral-300)] bg-[var(--neutral-200)]/95 px-4 py-4 backdrop-blur-sm md:-mx-10 md:px-10">
             <div className="flex items-center justify-between">
               <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h2 text-[var(--color-primary)]">
-                Now Shipping
+                Projects
               </h2>
               <span className="font-[family-name:var(--font-ibm-plex-mono)] text-caption text-[var(--neutral-500)]">
-                {nowShipping.length} Products
+                {nowShipping.length} Services
               </span>
             </div>
           </div>
@@ -186,14 +186,14 @@ export default function Home() {
             </div>
             <div className="p-6">
               <h3 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 mb-2 text-[var(--color-primary)]">
-                SellPage 출시 5개월, 그로스를 직접 돌려본 기록
+                실서비스 운영에서 만난 문제들과 해결 과정
               </h3>
               <p className="text-body-small mb-4 text-[var(--neutral-500)]">
-                Mixpanel 퍼널 분석, Google Ads 최적화, 광고 중단 후 오가닉
-                성장까지 — 1인 개발자가 직접 그로스를 돌리며 배운 것들.
+                Mixpanel 퍼널 분석으로 UX 병목을 발견하고, 데이터 기반으로
+                개선한 과정.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['퍼널 분석', 'CTR 최적화', 'A/B 테스트', '오가닉 그로스'].map(
+                {['퍼널 분석', 'UX 개선', 'API 연동', 'SEO 최적화'].map(
                   (tag) => (
                     <span
                       key={tag}
@@ -274,17 +274,16 @@ export default function Home() {
                 FRONTEND / FULL-STACK ENGINEER
               </p>
               <p className="text-body-large max-w-xl text-[var(--neutral-500)]">
-                기획부터 배포, 운영까지 제품의 전 과정을 주도하는 Product
-                Engineer입니다.
+                기획부터 배포·운영까지 직접 경험한 프론트엔드
+                엔지니어입니다.
                 <br />
                 <br />
-                AI 에이전트와 함께 모호한 생각을 구체적인 문서와 코드로 빠르게
-                시각화하며, 1인 개발의 한계를 넘어선 생산성을 만들어냅니다.
+                Next.js, React, TypeScript를 주력으로 실서비스를 설계하고
+                운영합니다. 데이터 분석으로 사용자 경험을 개선합니다.
                 <br />
                 <br />
-                혼자만의 빠른 실행을 넘어, 이제는 팀과 함께 사용자 문제를 더 깊이
-                파고들고, 지속 가능한 성장을 데이터와 함께 만들어가는 과정을
-                기다리고 있습니다.
+                팀 환경에서 동료와 함께 더 나은 서비스를 만들어가는 과정을
+                기대하고 있습니다.
               </p>
             </div>
 
@@ -369,7 +368,7 @@ export default function Home() {
                 </span>
               </p>
               <p className="font-[family-name:var(--font-ibm-plex-mono)] text-xs text-[var(--neutral-500)]">
-                작게 만들고, 실제로 운영하고, 배운 것을 정리합니다.
+                직접 만들고, 운영하고, 개선한 기록입니다.
               </p>
             </div>
             <div className="font-[family-name:var(--font-ibm-plex-mono)] text-xs text-[var(--neutral-500)]">
