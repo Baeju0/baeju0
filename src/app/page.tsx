@@ -1,7 +1,22 @@
 import Link from 'next/link';
 import { Navigation, ProductCard, Button, SocialLink, SkillsSection } from '@/components';
 
-const nowShipping = [
+export const revalidate = 86400;
+
+async function getSellPageLastUpdated(): Promise<string> {
+  try {
+    const res = await fetch('https://sellpage.life/build-info.json', {
+      next: { revalidate: 86400 },
+    });
+    const { lastUpdate } = await res.json();
+    const date = new Date(lastUpdate);
+    return `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}.${String(date.getDate()).padStart(2, '0')}`;
+  } catch {
+    return '2026.03.15';
+  }
+}
+
+const nowShipping = (sellPageLastUpdated: string) => [
   {
     id: 'PRD-001',
     title: 'SellPage',
@@ -14,7 +29,7 @@ const nowShipping = [
     ],
     status: 'live' as const,
     href: 'https://www.sellpage.life',
-    lastUpdated: '2026.03.15',
+    lastUpdated: sellPageLastUpdated,
   },
   {
     id: 'PRD-002',
@@ -59,7 +74,9 @@ const values = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const sellPageLastUpdated = await getSellPageLastUpdated();
+  const products = nowShipping(sellPageLastUpdated);
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -122,7 +139,7 @@ export default function Home() {
                   Projects
                 </p>
                 <p className="font-[family-name:var(--font-space-grotesk)] text-display-h2 text-[var(--color-primary)]">
-                  {nowShipping.length}
+                  {products.length}
                 </p>
               </div>
               <div>
@@ -146,13 +163,13 @@ export default function Home() {
                 Projects
               </h2>
               <span className="font-[family-name:var(--font-ibm-plex-mono)] text-caption text-[var(--neutral-500)]">
-                {nowShipping.length} Services
+                {products.length} Services
               </span>
             </div>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {nowShipping.map((product) => (
+            {products.map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}
           </div>
