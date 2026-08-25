@@ -11,7 +11,7 @@ interface ProductCardProps {
   title: string;
   description: string;
   status: Status;
-  href: string;
+  href?: string;
   lastUpdated?: string;
   impact?: string[];
 }
@@ -62,36 +62,38 @@ export function ProductCard({
             Updated {lastUpdated}
           </span>
         )}
-        <Link
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ml-auto inline-flex items-center gap-1 font-[family-name:var(--font-ibm-plex-mono)] text-sm font-medium text-[var(--color-primary)] transition-colors hover:text-[var(--color-accent)]"
-          onClick={() =>
-            trackEvent('click_product', {
-              id,
-              title,
-              url: href,
-            })
-          }
-        >
-          View Product
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="transition-transform group-hover:translate-x-0.5"
+        {href && (
+          <Link
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-auto inline-flex items-center gap-1 font-[family-name:var(--font-ibm-plex-mono)] text-sm font-medium text-[var(--color-primary)] transition-colors hover:text-[var(--color-accent)]"
+            onClick={() =>
+              trackEvent('click_product', {
+                id,
+                title,
+                url: href,
+              })
+            }
           >
-            <path
-              d="M6 12L10 8L6 4"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="square"
-            />
-          </svg>
-        </Link>
+            View Product
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="transition-transform group-hover:translate-x-0.5"
+            >
+              <path
+                d="M6 12L10 8L6 4"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="square"
+              />
+            </svg>
+          </Link>
+        )}
       </div>
     </article>
   );
