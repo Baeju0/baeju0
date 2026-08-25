@@ -44,8 +44,8 @@ const nowShipping = (
     description:
       '스마트폰 촬영본 한 장으로 연출컷 생성부터 상세페이지 제작까지, 상품 런칭의 전 과정을 자동화하는 AI 스튜디오.',
     impact: [
-      `누적 가입 사용자 ${sellPageStats.registeredUsers}명 · 사용자 생성 페이지 ${sellPageStats.generatedPages}개 · 유료 결제 ${sellPageStats.paidPayments}건 (${formatKstDate(sellPageStats.asOf)} 기준)`,
-      '광고 중단 후 SEO 콘텐츠 전략으로 오가닉 가입 · 결제 지속 발생',
+      `누적 가입 사용자 ${sellPageStats.registeredUsers}명 · 사용자 생성 페이지 ${sellPageStats.generatedPages}개 (${formatKstDate(sellPageStats.asOf)} 기준)`,
+      '광고 중단 후 SEO 콘텐츠 전략으로 오가닉 가입 · 유료 결제 및 재결제 발생',
       'UX 개선으로 보너스 사용률 0% → 100%, Google Ads CTR 11.19%',
     ],
     status: 'live' as const,

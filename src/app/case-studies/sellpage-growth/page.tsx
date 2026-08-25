@@ -20,7 +20,7 @@ export default async function SellPageGrowthCaseStudy() {
       label: '사용자 생성 페이지',
       value: `${sellPageStats.generatedPages}개`,
     },
-    { label: '유료 결제', value: `${sellPageStats.paidPayments}건` },
+    { label: '수익화', value: '유료 결제 및 재결제 발생' },
   ];
 
   return (
