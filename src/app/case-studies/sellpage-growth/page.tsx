@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Navigation } from '@/components';
+import { formatKstDate, getSellPageStats } from '@/lib/sellpage-stats';
 
 export const metadata: Metadata = {
   title: '실서비스 운영에서 만난 문제들과 해결 과정 | Baeju0 Labs',
@@ -8,7 +9,20 @@ export const metadata: Metadata = {
     'B2B SaaS SellPage 운영 과정에서 만난 UX 병목, API 최적화, SEO 전환 등 기술적 문제를 데이터 기반으로 해결한 과정.',
 };
 
-export default function SellPageGrowthCaseStudy() {
+export default async function SellPageGrowthCaseStudy() {
+  const sellPageStats = await getSellPageStats();
+  const metrics = [
+    {
+      label: '누적 가입 사용자',
+      value: `${sellPageStats.registeredUsers}명`,
+    },
+    {
+      label: '사용자 생성 페이지',
+      value: `${sellPageStats.generatedPages}개`,
+    },
+    { label: '수익화', value: '유료 결제 및 재결제 발생' },
+  ];
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -65,13 +79,8 @@ export default function SellPageGrowthCaseStudy() {
           <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 mb-6 text-[var(--color-primary)]">
             핵심 지표 요약
           </h2>
-          <div className="grid grid-cols-2 gap-px border border-[var(--neutral-300)] bg-[var(--neutral-300)] md:grid-cols-4">
-            {[
-              { label: '누적 사용자', value: '172명' },
-              { label: '누적 결제', value: '11건' },
-              { label: '생성 페이지', value: '322개' },
-              { label: '오가닉 전환율', value: '16.2%' },
-            ].map((metric) => (
+          <div className="grid grid-cols-1 gap-px border border-[var(--neutral-300)] bg-[var(--neutral-300)] sm:grid-cols-3">
+            {metrics.map((metric) => (
               <div
                 key={metric.label}
                 className="bg-[var(--neutral-200)] p-4 text-center"
@@ -85,6 +94,10 @@ export default function SellPageGrowthCaseStudy() {
               </div>
             ))}
           </div>
+          <p className="mt-3 font-[family-name:var(--font-ibm-plex-mono)] text-xs text-[var(--neutral-500)]">
+            {formatKstDate(sellPageStats.asOf)} 운영 DB 기준 · 관리자 계정과
+            관리자 생성물, 환불 결제 제외
+          </p>
         </section>
 
         {/* Case 1: 퍼널 분석 */}
@@ -391,7 +404,7 @@ export default function SellPageGrowthCaseStudy() {
             Case 04
           </p>
           <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 mb-4 text-[var(--color-primary)]">
-            광고비 0원, 오가닉 전환율 16.2% — 콘텐츠가 만든 자생력
+            광고비 0원에서도 이어진 가입과 결제 — SEO 콘텐츠의 장기 효과
           </h2>
 
           <div className="space-y-4 text-body-small text-[var(--neutral-500)]">
@@ -418,7 +431,8 @@ export default function SellPageGrowthCaseStudy() {
                 &quot;상세페이지 제작 팁&quot; 등 타겟 사용자의 검색 의도에
                 맞춘 가이드 콘텐츠를 꾸준히 작성했습니다. 셀러들이 실제로
                 검색하는 키워드를 중심으로, 제품 사용법과 자연스럽게 연결되는
-                콘텐츠를 설계했습니다.
+                콘텐츠를 설계했습니다. Mixpanel의 유입 경로를 함께 확인하며
+                콘텐츠가 오가닉 가입으로 이어지는 흐름을 추적했습니다.
               </p>
             </div>
 
@@ -431,10 +445,10 @@ export default function SellPageGrowthCaseStudy() {
                       지표
                     </th>
                     <th className="px-4 py-2 font-[family-name:var(--font-ibm-plex-mono)] text-xs font-medium text-[var(--neutral-500)]">
-                      Ads 기간 (2개월)
+                      Ads 운영 (2개월)
                     </th>
                     <th className="px-4 py-2 font-[family-name:var(--font-ibm-plex-mono)] text-xs font-medium text-[var(--color-accent)]">
-                      오가닉 기간 (2개월)
+                      광고 종료 후 첫 2개월
                     </th>
                   </tr>
                 </thead>
@@ -452,7 +466,7 @@ export default function SellPageGrowthCaseStudy() {
                   </tr>
                   <tr className="border-b border-[var(--neutral-300)]">
                     <td className="px-4 py-2 text-[var(--neutral-500)]">
-                      유료 결제
+                      결제 발생
                     </td>
                     <td className="px-4 py-2 text-[var(--neutral-500)]">
                       5건
@@ -461,33 +475,28 @@ export default function SellPageGrowthCaseStudy() {
                       6건
                     </td>
                   </tr>
-                  <tr>
-                    <td className="px-4 py-2 text-[var(--neutral-500)]">
-                      전환율
-                    </td>
-                    <td className="px-4 py-2 text-[var(--neutral-500)]">
-                      3.7%
-                    </td>
-                    <td className="px-4 py-2 text-[var(--color-accent)]">
-                      16.2%
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>
+            <p className="font-[family-name:var(--font-ibm-plex-mono)] text-xs text-[var(--neutral-500)]">
+              2026.03 당시 동일한 2개월 구간의 운영 기록이며, 결제는 건수
+              기준입니다.
+            </p>
 
             <div>
               <h3 className="mb-1 font-semibold text-[var(--color-primary)]">
                 인사이트
               </h3>
               <p>
-                광고를 끈 뒤에도 2개월간 37명이 가입하고 6건의 결제가
-                발생했습니다. 오가닉 전환율 16.2%는 Ads 기간(3.7%) 대비 약
-                4.4배 높은 수치였습니다. 광고를 통해 들어온 사용자는 &quot;한번
-                써볼까&quot;라는 호기심 기반이었던 반면, 가이드 콘텐츠를 읽고
-                유입된 사용자는 이미 문제를 인식하고 해결책을 찾는
-                상태였기 때문입니다. 마케팅 예산 없이도 제품이 자생할 수
-                있는 구조를 만든 것이 가장 큰 성과였습니다.
+                광고를 끈 뒤 첫 2개월에도 37명이 가입하고 6건의 결제가
+                발생했습니다. 가입 규모는 광고 운영 기간보다 작았지만 결제는
+                끊기지 않았고, Mixpanel에서도 SEO 콘텐츠를 통한 오가닉 가입을
+                확인했습니다. 이 흐름은 초기 2개월에 그치지 않았습니다.{' '}
+                {formatKstDate(sellPageStats.asOf)} 기준 누적 가입 사용자{' '}
+                {sellPageStats.registeredUsers}명 · 사용자 생성 페이지{' '}
+                {sellPageStats.generatedPages}개로 성장했고, 유료 결제 및
+                재결제도 이어지고 있습니다. 마케팅 예산 없이도 제품이 자생할
+                수 있는 구조를 만든 것이 가장 큰 성과였습니다.
               </p>
             </div>
           </div>
