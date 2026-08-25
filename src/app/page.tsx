@@ -42,7 +42,6 @@ const nowShipping = (sellPageLastUpdated: string) => [
       'B2C → B2B 피봇 과정에서 사용자 피드백 기반 의사결정',
     ],
     status: 'archived' as const,
-    href: 'https://fastpost.life',
     lastUpdated: '2025.11.12',
   },
 ];
