@@ -63,7 +63,6 @@ const nowShipping = (
       'B2C 블로그 자동화 도구로 시작했으나, 시장 반응 부재 확인 후 B2B SaaS(SellPage)로 방향 전환. 피봇 의사결정 경험.',
     ],
     status: 'archived' as const,
-    href: 'https://fastpost.life',
     lastUpdated: '2025.11.12',
   },
 ];
