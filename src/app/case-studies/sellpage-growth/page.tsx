@@ -404,7 +404,7 @@ export default async function SellPageGrowthCaseStudy() {
             Case 04
           </p>
           <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 mb-4 text-[var(--color-primary)]">
-            광고비 0원, 오가닉 전환율 16.2% — 콘텐츠가 만든 자생력
+            광고비 0원에서도 이어진 가입과 결제 — SEO 콘텐츠의 장기 효과
           </h2>
 
           <div className="space-y-4 text-body-small text-[var(--neutral-500)]">
@@ -431,11 +431,12 @@ export default async function SellPageGrowthCaseStudy() {
                 &quot;상세페이지 제작 팁&quot; 등 타겟 사용자의 검색 의도에
                 맞춘 가이드 콘텐츠를 꾸준히 작성했습니다. 셀러들이 실제로
                 검색하는 키워드를 중심으로, 제품 사용법과 자연스럽게 연결되는
-                콘텐츠를 설계했습니다.
+                콘텐츠를 설계했습니다. Mixpanel의 유입 경로를 함께 확인하며
+                콘텐츠가 오가닉 가입으로 이어지는 흐름을 추적했습니다.
               </p>
             </div>
 
-            {/* Before/After 비교 */}
+            {/* 광고 운영 종료 전후의 초기 2개월 비교 */}
             <div className="my-4 overflow-hidden border border-[var(--neutral-300)]">
               <table className="w-full text-left">
                 <thead>
@@ -444,10 +445,10 @@ export default async function SellPageGrowthCaseStudy() {
                       지표
                     </th>
                     <th className="px-4 py-2 font-[family-name:var(--font-ibm-plex-mono)] text-xs font-medium text-[var(--neutral-500)]">
-                      Ads 기간 (2개월)
+                      Ads 운영 (2개월)
                     </th>
                     <th className="px-4 py-2 font-[family-name:var(--font-ibm-plex-mono)] text-xs font-medium text-[var(--color-accent)]">
-                      오가닉 기간 (2개월)
+                      광고 종료 후 첫 2개월
                     </th>
                   </tr>
                 </thead>
@@ -465,7 +466,7 @@ export default async function SellPageGrowthCaseStudy() {
                   </tr>
                   <tr className="border-b border-[var(--neutral-300)]">
                     <td className="px-4 py-2 text-[var(--neutral-500)]">
-                      유료 결제
+                      결제 발생
                     </td>
                     <td className="px-4 py-2 text-[var(--neutral-500)]">
                       5건
@@ -474,33 +475,28 @@ export default async function SellPageGrowthCaseStudy() {
                       6건
                     </td>
                   </tr>
-                  <tr>
-                    <td className="px-4 py-2 text-[var(--neutral-500)]">
-                      전환율
-                    </td>
-                    <td className="px-4 py-2 text-[var(--neutral-500)]">
-                      3.7%
-                    </td>
-                    <td className="px-4 py-2 text-[var(--color-accent)]">
-                      16.2%
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>
+            <p className="font-[family-name:var(--font-ibm-plex-mono)] text-xs">
+              2026.03 당시 동일한 2개월 구간의 운영 기록이며, 결제는 건수
+              기준입니다.
+            </p>
 
             <div>
               <h3 className="mb-1 font-semibold text-[var(--color-primary)]">
                 인사이트
               </h3>
               <p>
-                광고를 끈 뒤에도 2개월간 37명이 가입하고 6건의 결제가
-                발생했습니다. 오가닉 전환율 16.2%는 Ads 기간(3.7%) 대비 약
-                4.4배 높은 수치였습니다. 광고를 통해 들어온 사용자는 &quot;한번
-                써볼까&quot;라는 호기심 기반이었던 반면, 가이드 콘텐츠를 읽고
-                유입된 사용자는 이미 문제를 인식하고 해결책을 찾는
-                상태였기 때문입니다. 마케팅 예산 없이도 제품이 자생할 수
-                있는 구조를 만든 것이 가장 큰 성과였습니다.
+                광고를 끈 뒤 첫 2개월에도 37명이 가입하고 6건의 결제가
+                발생했습니다. 가입 규모는 광고 운영 기간보다 작았지만 결제는
+                끊기지 않았고, Mixpanel에서도 SEO 콘텐츠를 통한 오가닉 가입을
+                확인했습니다. 이 흐름은 초기 2개월에 그치지 않았습니다.{' '}
+                {formatKstDate(sellPageStats.asOf)} 기준 누적 가입 사용자{' '}
+                {sellPageStats.registeredUsers}명 · 사용자 생성 페이지{' '}
+                {sellPageStats.generatedPages}개로 성장했고, 유료 결제 및
+                재결제도 이어지고 있습니다. 마케팅 예산 없이도 제품이 자생할
+                수 있는 구조를 만든 것이 가장 큰 성과였습니다.
               </p>
             </div>
           </div>
