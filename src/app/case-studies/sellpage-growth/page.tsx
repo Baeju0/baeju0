@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Navigation } from '@/components';
+import { formatKstDate, getSellPageStats } from '@/lib/sellpage-stats';
 
 export const metadata: Metadata = {
   title: 'SellPage 출시 5개월, 그로스를 직접 돌려본 기록 | Baeju0 Labs',
@@ -8,7 +9,20 @@ export const metadata: Metadata = {
     'AI 상품 사진/상세페이지 SaaS SellPage의 출시 후 5개월간 그로스 실험 기록. Mixpanel 퍼널 분석, Google Ads 최적화, 광고 중단 후 오가닉 성장 케이스.',
 };
 
-export default function SellPageGrowthCaseStudy() {
+export default async function SellPageGrowthCaseStudy() {
+  const sellPageStats = await getSellPageStats();
+  const metrics = [
+    {
+      label: '누적 가입 사용자',
+      value: `${sellPageStats.registeredUsers}명`,
+    },
+    {
+      label: '사용자 생성 페이지',
+      value: `${sellPageStats.generatedPages}개`,
+    },
+    { label: '유료 결제', value: `${sellPageStats.paidPayments}건` },
+  ];
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -65,13 +79,8 @@ export default function SellPageGrowthCaseStudy() {
           <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 mb-6 text-[var(--color-primary)]">
             핵심 지표 요약
           </h2>
-          <div className="grid grid-cols-2 gap-px border border-[var(--neutral-300)] bg-[var(--neutral-300)] md:grid-cols-4">
-            {[
-              { label: '누적 사용자', value: '172명' },
-              { label: '누적 결제', value: '11건' },
-              { label: '생성 페이지', value: '322개' },
-              { label: '오가닉 전환율', value: '16.2%' },
-            ].map((metric) => (
+          <div className="grid grid-cols-1 gap-px border border-[var(--neutral-300)] bg-[var(--neutral-300)] sm:grid-cols-3">
+            {metrics.map((metric) => (
               <div
                 key={metric.label}
                 className="bg-[var(--neutral-200)] p-4 text-center"
@@ -85,6 +94,10 @@ export default function SellPageGrowthCaseStudy() {
               </div>
             ))}
           </div>
+          <p className="mt-3 font-[family-name:var(--font-ibm-plex-mono)] text-xs text-[var(--neutral-500)]">
+            {formatKstDate(sellPageStats.asOf)} 운영 DB 기준 · 관리자 계정과
+            관리자 생성물, 환불 결제 제외
+          </p>
         </section>
 
         {/* Case 1: 퍼널 분석 */}

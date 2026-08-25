@@ -1,5 +1,10 @@
 import Link from 'next/link';
 import { Navigation, ProductCard, Button, SocialLink } from '@/components';
+import {
+  formatKstDate,
+  getSellPageStats,
+  type SellPageStats,
+} from '@/lib/sellpage-stats';
 
 export const revalidate = 86400;
 
@@ -8,22 +13,38 @@ async function getSellPageLastUpdated(): Promise<string> {
     const res = await fetch('https://sellpage.life/build-info.json', {
       next: { revalidate: 86400 },
     });
-    const { lastUpdate } = await res.json();
-    const date = new Date(lastUpdate);
-    return `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}.${String(date.getDate()).padStart(2, '0')}`;
+
+    if (!res.ok) {
+      throw new Error(`SellPage build info request failed: ${res.status}`);
+    }
+
+    const data: unknown = await res.json();
+    if (
+      !data ||
+      typeof data !== 'object' ||
+      typeof (data as { lastUpdate?: unknown }).lastUpdate !== 'string' ||
+      Number.isNaN(Date.parse((data as { lastUpdate: string }).lastUpdate))
+    ) {
+      throw new Error('SellPage build info response is invalid');
+    }
+
+    return formatKstDate((data as { lastUpdate: string }).lastUpdate);
   } catch {
-    return '2026.03.15';
+    return '2026.08.21';
   }
 }
 
-const nowShipping = (sellPageLastUpdated: string) => [
+const nowShipping = (
+  sellPageLastUpdated: string,
+  sellPageStats: SellPageStats
+) => [
   {
     id: 'PRD-001',
     title: 'SellPage',
     description:
       '스마트폰 촬영본 한 장으로 연출컷 생성부터 상세페이지 제작까지, 상품 런칭의 전 과정을 자동화하는 AI 스튜디오.',
     impact: [
-      '누적 사용자 192명 · 유료 결제 11건 · 생성 페이지 345개',
+      `누적 가입 사용자 ${sellPageStats.registeredUsers}명 · 사용자 생성 페이지 ${sellPageStats.generatedPages}개 · 유료 결제 ${sellPageStats.paidPayments}건 (${formatKstDate(sellPageStats.asOf)} 기준)`,
       '광고 중단 후 SEO 콘텐츠 전략으로 오가닉 가입 · 결제 지속 발생',
       'UX 개선으로 보너스 사용률 0% → 100%, Google Ads CTR 11.19%',
     ],
@@ -75,8 +96,11 @@ const values = [
 ];
 
 export default async function Home() {
-  const sellPageLastUpdated = await getSellPageLastUpdated();
-  const products = nowShipping(sellPageLastUpdated);
+  const [sellPageLastUpdated, sellPageStats] = await Promise.all([
+    getSellPageLastUpdated(),
+    getSellPageStats(),
+  ]);
+  const products = nowShipping(sellPageLastUpdated, sellPageStats);
   return (
     <div className="min-h-screen">
       <Navigation />
