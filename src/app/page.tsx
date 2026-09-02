@@ -25,7 +25,7 @@ const nowShipping = (sellPageLastUpdated: string) => [
     impact: [
       'Next.js App Router · Supabase · Vercel 기반 풀스택 구성',
       'Gemini API 연동, 이미지 생성 파이프라인 및 에러 핸들링',
-      'Mixpanel 퍼널 분석 → UX 개선 (보너스 사용률 0% → 100%)',
+      'DB·Mixpanel 기반 ‘보너스 확인 → AI Designer 이동’ 퍼널 개선 · 63% 이동 확인',
     ],
     status: 'live' as const,
     href: 'https://www.sellpage.life',
@@ -39,7 +39,7 @@ const nowShipping = (sellPageLastUpdated: string) => [
     impact: [
       'Google Cloud Vision API로 이미지 메타데이터 파싱 및 순서 정렬',
       '카카오맵 API 연동, 좌표 기반 장소 검색 및 리뷰 매칭',
-      'B2C → B2B 피봇 과정에서 사용자 피드백 기반 의사결정',
+      'B2C 블로그 글쓰기 자동화 서비스의 시장성을 검증하고, 수요·수익성 한계를 확인해 서비스 종료 의사결정',
     ],
     status: 'archived' as const,
     lastUpdated: '2025.11.12',
@@ -197,7 +197,7 @@ export default async function Home() {
                 PRD-001 · SellPage
               </span>
               <span className="font-[family-name:var(--font-ibm-plex-mono)] text-xs text-[var(--color-accent)]">
-                2026.03
+                UPDATED 2026.09
               </span>
             </div>
             <div className="p-6">
@@ -205,8 +205,8 @@ export default async function Home() {
                 실서비스 운영에서 만난 문제들과 해결 과정
               </h3>
               <p className="text-body-small mb-4 text-[var(--neutral-500)]">
-                Mixpanel 퍼널 분석으로 UX 병목을 발견하고, 데이터 기반으로
-                개선한 과정.
+                DB로 미사용 상태를 발견해 안내 UI를 개선하고, Mixpanel로
+                ‘보너스 확인 → AI Designer 이동’ 퍼널을 측정한 과정.
               </p>
               <div className="flex flex-wrap gap-2">
                 {['퍼널 분석', 'UX 개선', 'API 연동', 'SEO 최적화'].map(
