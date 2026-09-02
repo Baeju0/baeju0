@@ -46,7 +46,7 @@ const nowShipping = (
     impact: [
       `누적 가입 사용자 ${sellPageStats.registeredUsers}명 · 사용자 생성 페이지 ${sellPageStats.generatedPages}개 (${formatKstDate(sellPageStats.asOf)} 기준)`,
       '광고 중단 후 SEO 콘텐츠 전략으로 오가닉 가입 · 유료 결제 및 재결제 발생',
-      'UX 개선으로 보너스 사용률 0% → 100%, Google Ads CTR 11.19%',
+      'DB·Mixpanel 기반 ‘보너스 확인 → AI Designer 이동’ 퍼널 개선 · 63% 이동 확인 · Google Ads CTR 11.19%',
     ],
     status: 'live' as const,
     href: 'https://www.sellpage.life',
@@ -60,7 +60,7 @@ const nowShipping = (
     impact: [
       'Google Cloud Vision API를 활용하여 다중 이미지의 시간/공간적 흐름을 분석하고 스토리텔링 구성',
       '네이버/카카오맵 API 연동으로 장소 리뷰 데이터를 수집하고, 이미지 키워드와 매칭하여 콘텐츠에 최적화된 형태로 반영',
-      'B2C 블로그 자동화 도구로 시작했으나, 시장 반응 부재 확인 후 B2B SaaS(SellPage)로 방향 전환. 피봇 의사결정 경험.',
+      'B2C 블로그 글쓰기 자동화 서비스의 시장성을 검증하고, 수요·수익성 한계를 확인해 서비스 종료 의사결정',
     ],
     status: 'archived' as const,
     lastUpdated: '2025.11.12',
@@ -221,19 +221,19 @@ export default async function Home() {
                 PRD-001 · SellPage
               </span>
               <span className="font-[family-name:var(--font-ibm-plex-mono)] text-xs text-[var(--color-accent)]">
-                2026.03
+                UPDATED 2026.09
               </span>
             </div>
             <div className="p-6">
               <h3 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 mb-2 text-[var(--color-primary)]">
-                SellPage 출시 5개월, 그로스를 직접 돌려본 기록
+                SellPage 운영과 성장 실험 기록
               </h3>
               <p className="text-body-small mb-4 text-[var(--neutral-500)]">
-                Mixpanel 퍼널 분석, Google Ads 최적화, 광고 중단 후 오가닉
-                성장까지 — 1인 개발자가 직접 그로스를 돌리며 배운 것들.
+                DB·Mixpanel 기반 퍼널 개선, Google Ads 최적화, 광고 중단 후
+                오가닉 성장까지 — 1인 개발자가 직접 운영하며 검증한 기록.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['퍼널 분석', 'CTR 최적화', 'A/B 테스트', '오가닉 그로스'].map(
+                {['퍼널 분석', 'CTR 최적화', 'UX 개선', '오가닉 그로스'].map(
                   (tag) => (
                     <span
                       key={tag}

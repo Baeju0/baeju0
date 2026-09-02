@@ -4,9 +4,9 @@ import { Navigation } from '@/components';
 import { formatKstDate, getSellPageStats } from '@/lib/sellpage-stats';
 
 export const metadata: Metadata = {
-  title: 'SellPage 출시 5개월, 그로스를 직접 돌려본 기록 | Baeju0 Labs',
+  title: 'SellPage 운영과 성장 실험 기록 | Baeju0 Labs',
   description:
-    'AI 상품 사진/상세페이지 SaaS SellPage의 출시 후 5개월간 그로스 실험 기록. Mixpanel 퍼널 분석, Google Ads 최적화, 광고 중단 후 오가닉 성장 케이스.',
+    'AI 상품 사진/상세페이지 SaaS SellPage를 직접 운영하며 DB·Mixpanel 기반 퍼널 개선, Google Ads 최적화, 광고 중단 후 오가닉 성장을 검증한 기록.',
 };
 
 export default async function SellPageGrowthCaseStudy() {
@@ -54,12 +54,12 @@ export default async function SellPageGrowthCaseStudy() {
             Case Study · PRD-001
           </p>
           <h1 className="font-[family-name:var(--font-space-grotesk)] text-display-h1 mb-4 text-[var(--color-primary)]">
-            SellPage 출시 5개월,
+            SellPage 운영과
             <br />
-            그로스를 직접 돌려본 기록
+            성장 실험 기록
           </h1>
           <p className="font-[family-name:var(--font-ibm-plex-mono)] text-sm text-[var(--neutral-500)]">
-            2026.03 · 읽는 시간 약 7분
+            2026.03 최초 작성 · 2026.09 최근 업데이트 · 읽는 시간 약 7분
           </p>
         </div>
 
@@ -227,14 +227,13 @@ export default async function SellPageGrowthCaseStudy() {
           </div>
         </section>
 
-        {/* Case 2: 보너스 사용률 */}
+        {/* Case 2: 보너스 확인 → AI Designer 이동 퍼널 개선 */}
         <section className="mb-12 border-l-2 border-[var(--color-accent)] pl-6">
           <p className="text-caption mb-2 text-[var(--color-accent)]">
             Case 02
           </p>
           <h2 className="font-[family-name:var(--font-space-grotesk)] text-display-h3 mb-4 text-[var(--color-primary)]">
-            보너스 사용률 0% → 100% — &quot;찾게 만들지 말고, 알아차리게
-            만들어라&quot;
+            웰컴 보너스 확인 → AI Designer 이동 퍼널 개선
           </h2>
 
           <div className="space-y-4 text-body-small text-[var(--neutral-500)]">
@@ -243,10 +242,8 @@ export default async function SellPageGrowthCaseStudy() {
                 문제 발견
               </h3>
               <p>
-                신규 가입 시 무료 이용권 4장과 보너스 2장을 제공하고 있었지만,
-                Mixpanel 모니터링 중 신규 사용자 2명이 무료 4장만 쓰고 보너스
-                2장은 사용하지 않고 이탈하는 패턴을 발견했습니다. 보너스
-                사용률은 0%였습니다.
+                웰컴 보너스 기능을 추가한 뒤 며칠 후 DB를 확인했고, 보너스
+                혜택을 사용하지 않은 신규 사용자가 다수인 것을 발견했습니다.
               </p>
             </div>
 
@@ -255,26 +252,21 @@ export default async function SellPageGrowthCaseStudy() {
                 원인 분석
               </h3>
               <p>
-                &quot;2장 더 받기&quot; 버튼이 생성 결과물 리스트 최하단 스크롤
-                영역에 위치해 있었습니다. 사용자는 결과물 4장을 확인하면 목적이
-                달성되어 추가 스크롤을 하지 않았습니다. 제작자 관점에서는 버튼이
-                눈에 잘 띈다고 느꼈으나, 실제 사용자에게는 해당 시점에 버튼을
-                찾아야 할 인지적 이유가 부족했습니다. &quot;디자인 문제&quot;가
-                아니라 &quot;사용자 행동 흐름(UX) 문제&quot;였습니다.
+                당시 &quot;2장 더 받기&quot; 버튼은 생성 결과물 목록 아래에 있어
+                추가로 스크롤해야 볼 수 있었습니다. 결과물을 확인한 뒤 보너스
+                안내를 놓칠 수 있는 구조라고 판단했습니다.
               </p>
             </div>
 
             <div>
               <h3 className="mb-1 font-semibold text-[var(--color-primary)]">
-                실험
+                개선
               </h3>
               <p>
-                결과물 생성 완료 후 2.5초 뒤, 플로팅 안내 UI를 노출하도록
-                변경했습니다. &quot;아직 확인하지 않은 보너스 2장이
-                있어요!&quot; 사용자가 결과물을 충분히 확인한 뒤 다음 행동을
-                자연스럽게 유도하는 타이밍으로 설정했습니다. 핵심은 사용자의
-                현재 목표를 방해하지 않으면서도 남은 혜택을 명확히 인지시키는
-                것이었습니다.
+                결과 목록 하단의 버튼을 플로팅 안내 UI로 바꿔, 보너스
+                확인부터 AI Designer 이동까지의 흐름을 재설계했습니다. 결과물
+                확인을 방해하지 않도록 생성 완료 2.5초 뒤 안내가 보이게
+                했습니다.
               </p>
             </div>
 
@@ -283,12 +275,11 @@ export default async function SellPageGrowthCaseStudy() {
                 결과
               </h3>
               <p>
-                보너스 사용률이 0%에서 100%로 올랐습니다. 신규 가입자 전원이
-                보너스를 활용해 최소 1회 이상 AI 스튜디오를 추가 경험하게
-                되었고, 제품의 핵심 가치를 체감하는 기회가 2배로 늘었습니다.
-                &quot;사용자가 보너스를 찾게 만드는 방식&quot;에서
-                &quot;알아차리게 만드는 방식&quot;으로 전환한 것이
-                핵심이었습니다.
+                Mixpanel로 &quot;보너스 확인 → AI Designer 이동&quot; 퍼널을
+                측정한 결과, 2026.01~09 보너스를 확인한 사용자 중 63%가 AI
+                Designer로 이동했습니다. DB에서는 미사용 상태를 발견하고,
+                Mixpanel에서는 후속 행동을 측정해 문제와 결과를 나눠
+                살펴봤습니다.
               </p>
             </div>
           </div>
@@ -510,18 +501,18 @@ export default async function SellPageGrowthCaseStudy() {
           <div className="space-y-3 text-body-small text-[var(--neutral-500)]">
             <p>
               <strong className="text-[var(--color-primary)]">
-                &quot;개발자는 사용자가 아니다&quot;를 데이터로 증명했다.
+                문제 발견과 후속 행동 확인에 서로 다른 데이터를 사용했다.
               </strong>{' '}
-              보너스 버튼이 눈에 잘 띈다고 느낀 건 제작자인 저뿐이었습니다.
-              Mixpanel 퍼널이 없었다면 보너스 사용률 0%라는 문제를 발견조차
-              못했을 것입니다. 측정할 수 없으면 개선할 수 없습니다.
+              DB로 보너스 미사용 상태를 발견하고, Mixpanel로 &quot;보너스 확인
+              → AI Designer 이동&quot; 퍼널을 측정했습니다. 데이터가 보여주는
+              범위를 구분해야 과장 없이 문제와 변화를 설명할 수 있었습니다.
             </p>
             <p>
               <strong className="text-[var(--color-primary)]">
-                작은 실험이 핵심 지표를 바꾼다.
+                작은 UI 개선도 사용자 행동으로 확인한다.
               </strong>{' '}
-              대규모 기능 개발 없이도 플로팅 UI 추가, CTA 카피 수정, 명칭 교체
-              같은 작은 실험이 핵심 지표를 극적으로 바꿀 수 있었습니다.
+              플로팅 안내 UI처럼 작은 변경도 노출 자체로 끝내지 않고, 이후
+              사용자가 어떤 행동을 했는지 이벤트로 확인했습니다.
             </p>
             <p>
               <strong className="text-[var(--color-primary)]">
